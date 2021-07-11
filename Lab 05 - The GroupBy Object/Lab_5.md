@@ -58,18 +58,6 @@ Out [2]
 ```
 
 
-
-
-A [GroupBy] operation is ideal when we want to group
-`DataFrame` rows into clusters based on shared values in a column.
-For example, the supermarket owner may be curious about the performance
-of the two *types* of items he sells: fruits and vegetables. If he can
-isolate the [\"Fruit\"] rows and [\"Vegetable\"] rows into
-separate groups, it becomes easier to perform an aggregate analysis on
-either, such as calculating the average price of items within the group.
-
-
-
 Let\'s begin by invoking the [groupby] method on the
 [supermarket] `DataFrame`. Pass in the name of the column
 whose values should be used to create the groups. The return value will

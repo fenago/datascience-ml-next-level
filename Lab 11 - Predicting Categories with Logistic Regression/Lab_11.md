@@ -39,20 +39,9 @@ You can access jupyter lab at `http://<update-DNS>/lab/workspaces/lab11_Logistic
 To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
 
-Technical requirements
-----------------------
-
-* * * * *
-
-You will be required to have Python 3.6 or greater, Pandas ≥
-0.23.4, Scikit-learn ≥ 0.20.0, and Matplotlib ≥ 3.0.0  installed on your
-system.
-
 
 Understanding logistic regression mathematically 
 -------------------------------------------------
-
-* * * * *
 
 As the name implies, logistic regression is fundamentally derived from
 the linear regression algorithm. The linear regression algorithm will be
@@ -109,8 +98,6 @@ In the preceding diagram, the following is happening:
 
 Implementing logistic regression using scikit-learn
 ---------------------------------------------------
-
-* * * * *
 
 In this section, you will learn how you can implement and quickly
 evaluate a logistic regression model for your dataset. We will be using
@@ -354,14 +341,6 @@ used a logistic regression model instead of the k-NN model. 
 Interpreting the logistic regression model
 ------------------------------------------
 
-* * * * *
-
-One of the key benefits of the logistic regression algorithm is that it
-is highly interpretable. This means that the outcome of the model can be
-interpreted as a function of the input variables. This allows us to
-understand how each variable contributes to the eventual outcome of the
-model. 
-
 In the first section, we understood that the logistic regression model
 consists of coefficients for each variable and an intercept that can be
 used to explain how the model works. In order to extract the
@@ -402,8 +381,6 @@ intercept, we can construct an equation in the following form:
 Summary
 -------
 
-* * * * *
-
 In this lab, you have learned how the logistic regression model
 works on a mathematical level. Although simplistic, the model proves to
 be formidable in terms of interpretability, which is highly beneficial
@@ -415,9 +392,6 @@ using the `GridSearchCV` algorithm. Additionally, you have
 learned to verify whether the results provided to you by the
 `GridSearchCV` algorithm are accurate by plotting the accuracy
 scores for different values of the hyperparameter. 
-
-Finally, you have scaled your data in order make it standardized and
-learned how to interpret your model on a mathematical level. 
 
 In the next lab, you will learn how to implement tree-based
 algorithms, such as decision trees, random forests, and gradient-boosted

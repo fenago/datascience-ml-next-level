@@ -4,27 +4,6 @@
 Lab 13. Predicting Numeric Outcomes with Linear Regression
 -------------------------------------------------------------
 
-graph\_from\_dot\_data() function on the Linear regression is used to
-predict a continuous numeric value from a set of input features. This
-machine learning algorithm is fundamental to statisticians when it comes
-to predicting numeric outcomes. Although advanced algorithms such as
-neural networks and deep learning have taken the place of linear
-regression in modern times, the algorithm is still key when it comes to
-providing you with the foundations for neural networks and deep
-learning. 
-
-The key benefit of building machine learning models with the linear
-regression algorithm, as opposed to neural networks and deep learning,
-is that it is highly interpretable. Interpretability helps you, as the
-machine learning practitioner, to understand how the different input
-variables behave when it comes to predicting output. 
-
-The linear regression algorithm is applied in the financial industry (in
-order to predict stock prices) and in the real estate industry (in order
-to predict housing prices). In fact, the linear regression algorithm can
-be applied in any field where there is a need to predict a numeric
-value, given a set of input features.
-
 In this lab, you will learn about the following topics:
 -   The inner mechanics of the linear regression algorithm
 -   Building and evaluating your first linear regression algorithm,
@@ -48,100 +27,7 @@ You can access jupyter lab at `http://<update-DNS>/lab/workspaces/lab13_Linear_R
 To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
 
-
-Technical requirements
-----------------------
-
-* * * * *
-
-You will be required to have Python 3.6 or greater, Pandas ≥
-0.23.4, Scikit-learn ≥ 0.20.0, and Matplotlib ≥ 3.0.0 installed on your
-system.
-
-
-The inner mechanics of the linear regression algorithm
-------------------------------------------------------
-
-* * * * *
-
-In its most fundamental form, the expression for the linear regression
-algorithm can be written as follows:
-
-*![](./images_5/01215421-90d3-4deb-8b53-b71e03457a6c.png)*
-
-In the preceding equation, the output of the model is a numeric outcome.
-In order to obtain this numeric outcome, we require that each input
-feature be multiplied with a parameter called *Parameter1*, and we add
-the second parameter, *Parameter2*, to this result. 
-
-So, in other words, our task is to find the values of the two parameters
-that can predict the value of the numeric outcome as accurately as
-possible. In visual terms, consider the following diagram:
-
-![](./images_5/b72ead10-8ad6-46cf-b071-bb274bdfea80.png)
-
-Two-dimensional plot between the target and input feature
-
-The preceding diagram shows a two-dimensional plot between the target
-that we want to predict on the *y *axis (numeric output) and the input
-feature, which is along the *x *axis. The goal of linear regression is
-to find the optimal values of the two parameters mentioned in the
-preceding equation, in order to fit a line through the given set of
-points.
-
-This line is known as the **line of best fit**. A line of best fit is
-one that fits the given sets of points very well, so that it can make
-accurate predictions for us. Therefore, in order to find the optimal
-values of the parameters that will result in the line of best fit, we
-need to define a function that can do it for us. 
-
-This function is known as the **loss function**. The goal of the loss
-function, as the name suggests, is to minimize the loss/errors as much
-as possible, so that we can obtain a line of best fit. In order to
-understand how this works, consider the following diagram:
-
-![](./images_5/28411f15-e9d0-4c17-885d-3eb7ba90d51e.png)
-
-Line of best fit
-
-In the preceding diagram, the line is fit through the set of data
-points, and the features can be defined as follows:
-
--   The distance between each point in the plot and the line is known as
-    the **residual**. 
--   The loss/error function is the sum of the squares of these
-    residuals. 
--   The goal of the linear regression algorithm is to minimize this
-    value. The sum of the squares of the residuals is known
-    as **ordinary least squares **(**OLS**).
-
-
-
-
-Implementing linear regression in scikit-learn
-----------------------------------------------
-
-* * * * *
-
-In this section, you will implement your first linear regression
-algorithm in scikit-learn. To make this easy to follow, the section will
-be divided into three subsections, in which you will learn about the
-following topics:
-
--   Implementing and visualizing a simple linear regression model in two
-    dimensions 
--   Implementing linear regression to predict the mobile transaction
-    amount 
--   Scaling your data for a potential increase in performance 
-
 ### Linear regression in two dimensions 
-
-In this subsection, you will learn how to implement your first linear
-regression algorithm, in order to predict the amount of a mobile
-transaction by using one input feature: the old balance amount of the
-account holder. We will be using the same fraudulent mobile transaction
-dataset that we used in earlier lab, *Predicting
-Categories with K-Nearest Neighbors*, of this course.
 
 The first step is to read in the dataset and define the feature and
 target variable. This can be done by using the following code:
@@ -229,8 +115,6 @@ This results in a line of best fit, as illustrated in the following
 diagram:
 
 ![](./images_5/6360ec19-facb-4a13-8c17-a3e4d0a03f8b.png)
-
-Line of best fit
 
 In the preceding code, first, we initialize a linear regression model
 and fit the training data into that model. Since we only have a single
@@ -335,23 +219,6 @@ scores in most cases.
 
 Model optimization 
 -------------------
-
-* * * * *
-
-The fundamental objective of the linear regression algorithm is to
-minimize the loss/cost function. In order to do this, the algorithm
-tries to optimize the values of the coefficients of each feature
-(*Parameter1*),* *such that the loss function is minimized. 
-
- 
-
-Sometimes, this leads to overfitting, as the coefficients of each
-variable are optimized for the data that the variable is trained on.
-This means that your linear regression model will not generalize beyond
-your current training data very well.
-
-The process by which we penalize hyper-optimized coefficients in order
-to prevent this type of overfitting is called **regularization**. 
 
 There are two broad types of regularization methods, as follows:
 
@@ -471,10 +338,6 @@ In the preceding code, the following applies:
     new ridge regression model with this optimal value in the training
     data, and we evaluate the accuracy score on the test data. 
 
-Since our initial model was already well optimized, the accuracy score
-did not increase by an observable amount. However, on datasets with
-larger dimensions/features, ridge regression holds immense value for
-providing you with a model that generalizes well, without overfitting. 
 
 In order to verify the results that the `GridSearchCV`
 algorithm has provided us with, we will construct a plot between the
@@ -530,25 +393,6 @@ plot. 
  
 
 ### Lasso regression
-
-The equation for lasso regression is as follows:
-
-![](./images_5/c94ad8c7-9b07-45d5-8272-24467303f316.png)
-
-In the preceding equation, the lasso loss function is equal to the
-ordinary least squares loss function plus the product of the absolute
-value of the coefficients of each feature and `alpha`. 
-
-`alpha` is a parameter that we can optimize to control the
-amount by which the lasso loss function penalizes the coefficients, in
-order to prevent overfitting. Once again, if `alpha` is equal
-to `0`, the lasso loss function is equal to the ordinary least
-squares loss function, thereby making no difference to the initial
-overfit model. 
-
-Therefore, optimizing this value of `alpha` provides the
-optimal model that generalizes well beyond the data that it has trained
-on. 
 
 In order to implement lasso regression into the fraud prediction
 dataset, we use the following code:
@@ -684,8 +528,6 @@ accuracy scores, and we can thus pick the value given to us by the
 Summary
 -------
 
-* * * * *
-
 In this lab, you learned about how the linear regression algorithm
 works internally, through key concepts such as residuals and ordinary
 least squares. You also learned how to visualize a simple linear
@@ -695,7 +537,3 @@ We also covered implementing the linear regression model to predict the
 amount of a mobile transaction, along with scaling your data in an
 effective pipeline, to bring potential improvements to
 your performance. 
-
-Finally, you learned how to optimize your model by using the concept of
-regularization, in the form of ridge and lasso regression. 
-

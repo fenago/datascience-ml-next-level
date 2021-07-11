@@ -45,7 +45,7 @@ example, the first three rows in `movies.csv` are:
 
 
 ```
-123Rank,Title,Studio,Gross,Year
+Rank,Title,Studio,Gross,Year
 1,Avengers: Endgame,Buena Vista,"$2,796.30",2019
 2,Avatar,Fox,"$2,789.70",2009
 ```

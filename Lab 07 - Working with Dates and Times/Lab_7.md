@@ -30,13 +30,13 @@ In  [1]  import datetime as dt
 
 
 
-Let\'s explore four classes nestled within the module: [date],
+Let\'s explore four classes nestled within the module: `date`,
 [time], [datetime,] and [timedelta].
 
 
 
- A [date] represents a single day in history. The object does not
-store either the time of day or the time. The [date] class
+ A `date` represents a single day in history. The object does not
+store either the time of day or the time. The `date` class
 constructor accepts [year], [month], and [day]
 parameters, all of which are passed sequentially as integers. The three
 arguments can also be passed either with keyword arguments. The next
@@ -57,7 +57,7 @@ Out [2] datetime.date(1991, 4, 12)
 
 
 [year], [month], and [day] attributes are available on
-the [date] object.
+the `date` object.
 
 
 
@@ -103,7 +103,7 @@ AttributeError: attribute 'month' of 'datetime.date' objects is not writable
 The complementary [time] class represents a specific time of day,
 irrespective of date. The first three parameters accept integer
 arguments for the [hour], [minute], and [second]. Like
-a [date] object, a [time] object is immutable. The next
+a `date` object, a [time] object is immutable. The next
 example uses a [time] object to model 6:43:25 AM.
 
 
@@ -272,7 +272,7 @@ Out [17] Timestamp('1991-04-12 00:00:00')
 
 
 `Pandas` considers a [Timestamp] to be equal to a
-[date] / [datetime] if the two objects store the same
+`date` / [datetime] if the two objects store the same
 information.
 
 

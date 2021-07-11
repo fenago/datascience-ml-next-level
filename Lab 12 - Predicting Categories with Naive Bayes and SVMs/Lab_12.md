@@ -4,12 +4,6 @@
 Lab 12. Predicting Categories with Naive Bayes and SVMs
 ----------------------------------------------------------
 
-In this lab, you will learn about two popular classification machine
-learning algorithms: the Naive Bayes algorithm and the linear support
-vector machine. The Naive Bayes algorithm is a probabilistic model that
-predicts classes and categories, while the linear support vector machine
-uses a linear decision boundary to predict classes and categories.
-
 In this lab, you will learn about the following topics:
 
 -   The theoretical concept behind the Naive Bayes algorithm, explained
@@ -31,73 +25,6 @@ All Notebooks are present in `work/datascience-ml-next-level` folder.
 
 You can access jupyter lab at `http://<update-DNS>/lab/workspaces/lab12_Naive_Bayes_SVMs`
 
-To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
-
-
-Technical requirements
-----------------------
-
-* * * * *
-
-You will be required to have Python 3.6 or greater, Pandas ≥
-0.23.4, Scikit-learn ≥ 0.20.0, and Matplotlib ≥ 3.0.0 installed on your
-system.
-
-The Naive Bayes algorithm 
---------------------------
-
-* * * * *
-
-The Naive Bayes algorithm makes use of the Bayes theorem, in order to
-classify classes and categories. The word **naive** was given to the
-algorithm because the algorithm assumes that all attributes are
-independent of one another. This is not actually possible, as every
-attribute/feature in a dataset is related to another attribute, in one
-way or another.
-
-Despite being naive, the algorithm does well in actual practice. The
-formula for the Bayes theorem is as follows:
-
-![](./images_4/b6ecedb4-67b5-4237-9b49-2216d121aa6f.png)
-
-Bayes theorem formula
-
-We can split the preceding algorithm into the following components: 
-
--   **p(h|D)**: This is the probability of a hypothesis taking
-    place, provided that we have a dataset. An example of this would be
-    the probability of a fraudulent transaction taking place, provided
-    that we had a dataset that consisted of fraudulent and
-    non-fraudulent transactions. 
--   **p(D|h)**: This is the probability of having the data, given a
-    hypothesis. An example of this would be the probability of having a
-    dataset that contained fraudulent transactions. 
--   **p(h)**: This is the probability of a hypothesis taking place,
-    in general. An example of this would be a statement that the average
-    probability of fraudulent transactions taking place in the mobile
-    industry is 2%. 
--   **p(D)**: This is the probability of having the data before
-    knowing any hypothesis. An example of this would be the probability
-    that a dataset of mobile transactions could be found without knowing
-    what we wanted to do with it (for example, predict fraudulent mobile
-    transactions).
-
-In the preceding formula, the *p(D)* can be rewritten in terms
-of *p(h)* and *p(D|h),* as follows:
-
-![](./images_4/cbf71d5d-fc0f-42df-b96b-04c2ffca9f97.png)
-
- 
-
-Let's take a look at how we can implement this with the method of
-predicting classes, in the case of the mobile transaction example: 
-
-![](./images_4/1.png)
- 
-Substituting the values in the preceding table into the Bayes theorem
-formula produces a result of 0.77. This means that the classifier
-predicts that there is a 77% probability that a transaction will be
-predicted as fraudulent, using the data that was given previously.
 
 ### Implementing the Naive Bayes algorithm in scikit-learn
 

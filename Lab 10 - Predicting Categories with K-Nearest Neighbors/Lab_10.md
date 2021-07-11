@@ -42,18 +42,7 @@ section. The dataset that we will be using is based on mobile payments
 and is found on the world's most popular competitive machine learning
 website – Kaggle.
 
-## Dataset
-Dataset is already downloaded.
-<span style="color:red;">Extract Dataset!</span>
-
-**Note:** Terminal is already running. You can also open new terminal by clicking:
-`File` > `New` > `Terminal`.
-
-Run the following commands in the terminal to extract dataset:
-
-`cd ~/work && unzip dataset.zip`
-
-`mv PS_20174392719_1491204439457_log.csv machine-learning-with-scikit-learn/Chapter02/`
+### Dataset
 
 The fundamental goal of this dataset is to predict whether a mobile
 transaction is fraudulent. In order to do this, we need to first have a
@@ -154,8 +143,6 @@ One of the main constraints of scikit-learn is that you cannot implement
 the machine learning algorithms on columns that are categorical in
 nature. For example, the `type` column in our dataset has
 five categories:
-
- 
 
 -   `CASH-IN`
 -   `CASH-OUT`
@@ -563,51 +550,13 @@ decrease the range. However, increasing the range will mean that it will
 take more computational time to compute and find the optimal number of
 neighbors, especially when your dataset is large. 
 
-Next, we initialize a k-NN classifier and use
-the `GridSearchCV()` function on the classifier along with
-the grid. We set the `cv` argument to 10, indicating that we
-want to use 10-fold cross validation while doing this. Cross validation
-is a technique in which the classifier first divides the data into 10
-parts. The first nine parts are used as the training set while the
-10^th^ part is used as the test set. In the second iteration, we use the
-first eight parts and the 10^th^ part as the training set, while the
-ninth part is used as the test set. This process is repeated until every
-part of the data is used for testing. This creates a very robust
-classifier, since we have used the entire dataset for training and
-testing and have not left out any part of the data. 
-
 Cross-validation is illustrated for you in the following diagram: 
 
 ![](./images_2/8c8120e6-4aeb-4917-8f03-0ae724654d7b.png)
 
-Cross-validation in action
-
- 
-
- 
-
- 
-
- 
-
-In the preceding diagram, the black boxes illustrate the training data
-while the white box illustrates the test data. 
-
-Finally, we use the `.best_params_` to extract the optimal
-number of neighbors. In our case, the optimal number of neighbors was 1,
-which resulted in an accuracy score of `0.985`. This is an
-improvement of 0.002 from the original classifier that we built, which
-had a score of `0.983` with three neighbors. 
-
-Using cross-validation ensures that we do not overfit or underfit the
-data as we have used the entire dataset for training and testing. 
-
-
 
 Scaling for optimized performance
 ---------------------------------
-
-* * * * *
 
 The k-NN algorithm is an algorithm that works based on distance. When a
 new data point is thrown into the dataset and the algorithm is given the
@@ -670,8 +619,6 @@ see how scaling the data results in improved performance. 
 Summary
 -------
 
-* * * * *
-
 This lab was fundamental in helping you prepare a dataset for
 machine learning with scikit-learn. You have learned about the
 constraints that are imposed when you do machine learning with
@@ -680,10 +627,7 @@ scikit-learn. 
 
 You have also learned how the k-NN algorithm works behind the scenes and
 have implemented a version of it using scikit-learn to predict whether a
-transaction was fraudulent. You then learned how to optimize the
-parameters of the algorithm using the popular `GridSearchCV`
-algorithm. Finally, you have learnt how to standardize and scale your
-data in order to optimize the performance of your model. 
+transaction was fraudulent.
 
 In the next lab, you will learn how to classify fraudulent
 transactions yet again with a new algorithm – the logistic regression

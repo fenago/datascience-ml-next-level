@@ -27,25 +27,8 @@ To copy and paste: use **Control-C** and to paste inside of a terminal, use **Co
 
 
 
-Technical requirements
-----------------------
-
-* * * * *
-
-You will be required to have Python 3.6 or greater, Pandas ≥
-0.23.4, Scikit-learn ≥ 0.20.0, and Matplotlib ≥ 3.0.0 installed on your
-system.
-
-
 Classification trees
 --------------------
-
-* * * * *
-
-Classification trees are used to predict a category or class. This is
-similar to the classification algorithms that you have learned about
-previously in this course, such as the k-nearest neighbors algorithm or
-logistic regression.
 
 Broadly speaking, there are three tree based algorithms that are used to
 solve classification problems:
@@ -58,112 +41,6 @@ In this section, you will learn how each of these tree based algorithms
 works, in order to classify a row of data as a particular class or
 category.
 
-### The decision tree classifier
-
-The decision tree is the simplest tree based algorithm, and serves as
-the foundation for the other two algorithms. Let's consider the
-following simple decision tree:
-
-![](./images_6/1f99278c-4182-4d1a-b104-e042c6f93ce9.png)
-
-A simple decision tree
-
-A decision tree, in simple terms, is a set of rules that help us
-classify observations into distinct groups. In the previous diagram, the
-rule could be written as the following:
-
-```
-If (value of feature is less than 50); then (put the triangles in the left-hand box and put the circles in the right-hand box).
-```
-
-The preceding decision tree perfectly divides the observations into two
-distinct groups. This is a characteristic of the ideal decision tree.
-The first box on the top is called the **root** of the tree, and is the
-most important feature of the tree when it comes to deciding how to
-group the observations.
-
-The boxes under the root node are known as the **children**. In the
-preceding tree, the **children** are also the **leaf** nodes. The
-**leaf** is the last set of boxes, usually in the bottommost part of the
-tree. As you might have guessed, the decision tree represents a regular
-tree, but inverted, or upside down.
-
-#### Picking the best feature
-
-How does the decision tree decide which feature is the best? The best
-feature is one that offers the best possible split, and divides the tree
-into two or more distinct groups, depending on the number of classes or
-categories that we have in the data. Let's have a look at the following
-diagram:
-
-![](./images_6/ce6d6aaa-33fc-4e14-b705-2f86fd2db0f0.png)
-
-A decision tree showing a good split
-
-In the preceding diagram, the following happens:
-
-1.  The tree splits the data from the root node into two distinct
-    groups.
-2.  In the left-hand group, we see that there are two triangles and one
-    circle.
-3.  In the right-hand group, we see that there are two circles and one
-    triangle.
-4.  Since the tree got the majority of each class into one group, we can
-    say that the tree has done a good job when it comes to splitting the
-    data into distinct groups.
-
-Let's take a look at another example—this time, one in which the split
-is bad. Consider the following diagram:
-
-![](./images_6/1bf114e1-67ff-4123-9b93-e914271b7f86.png)
-
-A decision tree with a bad split
-
-In the preceding diagram, the following happens:
-
-1.  The tree splits the data in the root node into four distinct groups.
-    This is bad in itself, as it is clear that there are only two
-    categories (circle and triangle).
-2.  Furthermore, each group has one triangle and one circle.
-3.  There is no majority class or category in any one of the four
-    groups. Each group has 50% of one category; therefore, the tree
-    cannot come to a conclusive decision, unless it relies on more
-    features, which then increases the complexity of the tree.
-
-#### The Gini coefficient
-
-The metric that the decision tree uses to decide if the root node is
-called the *Gini coefficient*. The higher the value of this coefficient,
-the better the job that this particular feature does at splitting the
-data into distinct groups. In order to learn how to compute the Gini
-coefficient for a feature, let's consider the following diagram:
-
-![](./images_6/ce6d6aaa-33fc-4e14-b705-2f86fd2db0f0.png)
-
-Computing the Gini coefficient
-
-In the preceding diagram, the following happens:
-
-1.  The feature splits the data into two groups.
-2.  In the left-hand group, we have two triangles and one circle.
-3.  Therefore, the Gini for the left-hand group is (2 triangles/3 total
-    data points)\^2+ (1 circle/3 total data points)\^2.
-4.  To calculate this, do the following:
-    ![](./images_6/e71b0785-d3f0-4207-ba17-9fc99937bac5.png)
-    0.55.
-5.  A value of 0.55 for the Gini coefficient indicates that the root of
-    this tree splits the data in such a way that each group has a
-    majority category.
-6.  A perfect root feature would have a Gini coefficient of 1. This
-    means that each group has only one class/category.
-7.  A bad root feature would have a Gini coefficient of 0.5, which
-    indicates that there is no distinct class/category in a group.
-
-In reality, the decision tree is built in a recursive manner, with the
-tree picking a random attribute for the root and then computing the Gini
-coefficient for that attribute. It does this until it finds the
-attribute that best splits the data in a node into groups that have
-distinct classes and categories.
 
 #### Implementing the decision tree classifier in scikit-learn
 
@@ -210,16 +87,6 @@ dt.score(X_test, y_test)
 
  
 
- 
-
- 
-
- 
-
- 
-
- 
-
 In the preceding code, we do the following:
 
 1.  First, we import `DecisionTreeClassifier` from
@@ -234,21 +101,6 @@ In the preceding code, we do the following:
     accuracy on the test data.
 
 #### Hyperparameter tuning for the decision tree
-
-The decision tree has a plethora of hyperparameters that require
-fine-tuning in order to derive the best possible model that reduces the
-generalization error as much as possible. In this section, we will focus
-on two specific hyperparameters:
-
--   **Max depth**: This is the maximum number of children nodes that can
-    grow out from the decision tree until the tree is cut off. For
-    example, if this is set to 3, then the tree will use three children
-    nodes and cut the tree off before it can grow any more.
--   **Min samples leaf:** This is the minimum number of samples, or data
-    points, that are required to be present in the leaf node. The leaf
-    node is the last node of the tree. If this parameter is, for
-    example, set to a value of 0.04, it tells the tree that it must grow
-    until the last node contains 4% of the total samples in the data.
 
 In order to optimize the ideal hyperparameter and to extract the best
 possible decision tree, we use the `GridSearchCV` module from
@@ -447,59 +299,6 @@ In the preceding diagram, note the following:
 Note how the decision tree is simply a set of If-then rules, constructed
 in a nested manner.
 
-### The random forests classifier
-
-Now that you understand the core principles of the decision tree at a
-very foundational level, we will next explore what random forests are.
-Random forests are a form of *ensemble* learning. An ensemble learning
-method is one that makes use of multiple machine learning models to make
-a decision.
-
-Let's consider the following diagram:
-
-![](./images_6/fc7c9ae3-9124-40e5-a150-b15f450ed0a6.png)
-
-The concept of ensemble learning
-
- 
-
-The random forest algorithm operates as follows:
-
-1.  Assume that you initially have a dataset with 100 features.
-2.  From this, we will build a decision tree with 10 features initially.
-    The features are selected randomly.
-3.  Now, using a random selection of the remaining 90 features, we
-    construct the next decision tree, again with 10 features.
-4.  This process continues until there are no more features left to
-    build a decision tree with.
-5.  At this point in time, we have 10 decision trees, each with 10
-    features.
-6.  Each decision tree is known as the **base estimator** of the random
-    forest.
-7.  Thus, we have a forest of trees, each built using a random set of 10
-    features.
-
-The next step for the algorithm is to make the prediction. In order to
-better understand how the random forest algorithm makes predictions,
-consider the following diagram:
-
-![](./images_6/8f837ee0-5b91-404b-a2b1-6d9c23c70aab.png)
-
-The process of making predictions in random forests
-
-In the preceding diagram, the following occurs:
-
-1.  Let's assume that there are 10 decision trees in the random forest.
-2.  Each decision tree makes a single prediction for the data that comes
-    in.
-3.  If six trees predict class A, and four trees predict class B, then
-    the final prediction of the random forest algorithm is class A, as
-    it had the majority vote.
-4.  This process of voting on a prediction, based on the outputs of
-    multiple models, is known as ensemble learning.
-
-Now that you have learned how the algorithm works internally, we can
-implement it using scikit-learn!
 
 #### Implementing the random forest classifier in scikit-learn
 
@@ -602,41 +401,6 @@ In the preceding code block, we do the following:
 5.  The best model is then extracted using these optimal
     hyperparameters.
 
-### The AdaBoost classifier
-
-In the section, you will learn how the AdaBoost classifier works
-internally, and how the concept of boosting might be used to give you
-better results. Boosting is a form of ensemble machine learning, in
-which a machine learning model learns from the mistakes of the models
-that were previously built, thereby increasing its final prediction
-accuracy.
-
-AdaBoost stands for Adaptive Boosting, and is a boosting algorithm in
-which a lot of importance is given to the rows of data that the initial
-predictive model got wrong. This ensures that the next predictive model
-will not make the same mistakes.
-
-The process by which the AdaBoost algorithm works is illustrated in the
-following diagram:
-
-![](./images_6/e3126163-d7d6-4584-99d6-798a12662965.png)
-
-An outline of the AdaBoost algorithm
-
-In the preceding diagram of the AdaBoost algorithm, the following
-happens:
-
-1.  The first decision tree is built and outputs a set of predictions.
-2.  The predictions that the first decision tree got wrong are given a
-    weight of `w`. This means that, if the weight is set to 2,
-    then two instances of that particular sample are introduced into the
-    dataset.
-3.  This enables decision tree 2 to learn at a faster rate, since we
-    have more samples of the data in which an error was made beforehand.
-4.  This process is repeated until all the trees are built.
-5.  Finally, the predictions of all the trees are gathered, and a
-    weighted vote is initiated in order to determine the final
-    prediction.
 
 #### Implementing the AdaBoost classifier in scikit-learn
 
@@ -1077,36 +841,6 @@ In the preceding code, we do the following:
 
 
 
-Ensemble classifier
--------------------
-
-* * * * *
-
-The concept of ensemble learning was explored in this lab, when we
-learned about random forests, AdaBoost, andgradient boosted trees.
-However, this concept can be extended to classifiers outside of trees.
-
-If we had built a logistic regression, random forest, and k-nearest
-neighbors classifiers, and we wanted to group them all together and
-extract the final prediction through majority voting, then we could do
-this by using the ensemble classifier.
-
-This concept can be better understood with the aid of the following
-diagram:
-
-![](./images_6/b8e69d20-ec1f-495c-a8aa-40b9c448b0a5.png)
-
-Ensemble learning with a voting classifier to predict fraud transactions
-
-When examining the preceding diagram, note the following:
-
--   The random forest classifier predicted that a particular transaction
-    was fraudulent, while the other two classifiers predicted that the
-    transaction was not fraudulent.
--   The voting classifier sees that two out of three (that is, a
-    majority) of the predictions are **Not Fraud**, and hence, outputs
-    the final prediction as **Not Fraud**.
-
 ### Implementing the voting classifier in scikit-learn
 
 In this section, you will learn how to implement the voting classifier
@@ -1196,8 +930,6 @@ In the preceding code, we do the following:
 Summary
 -------
 
-* * * * *
-
 While this lab was rather long, you have entered the world of tree
 based algorithms, and left with a wide arsenal of tools that you can
 implement in order to solve both small- and large-scale problems. To
@@ -1209,7 +941,3 @@ summarize, you have learned the following:
 -   How to use gradient boosted trees for regression
 -   How the voting classifier can be used to build a single model out of
     different models
-
-In the upcoming lab, you will learn how you can work with data that
-does not have a target variable or labels, and how to perform
-unsupervised machine learning in order to solve such problems!

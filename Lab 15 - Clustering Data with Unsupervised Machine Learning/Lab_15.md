@@ -28,77 +28,8 @@ You can access jupyter lab at `http://<update-DNS>/lab/workspaces/lab15_Unsuperv
 To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
 
-
-The k-means algorithm
----------------------
-
-* * * * *
-
-In this section, you will learn about how the k-means algorithm works
-under the hood, in order to cluster data into groups that make logical
-sense. 
-
-Let's consider a set of points, as illustrated in the following diagram:
-
-![](./images_7/38754811-d2da-43b5-9b52-c27023c67987.png)
-
-A random set of points 
-
-### Assignment of centroids
-
-The first step that the algorithm takes is to assign a set of random
-centroids. Assuming that we want to find two distinct clusters or
-groups, the algorithm can assign two centroids, as shown in the
-following diagram:
-
-![](./images_7/c61f2c41-10cd-407b-8966-e36870d4e048.png)
-
-Centroids, represented by stars
-
-In the preceding diagram, the stars represent the centroids of the
-algorithm. Note that in this case, the clusters' centers perfectly fit
-the two distinct groups. This is the most ideal case. In reality, the
-means (or centroids) are assigned randomly, and, with every iteration,
-the cluster centroids move closer to the center of the two groups. 
-
-The algorithm is known as the k-means algorithm, as we try to find the
-mean of a group of points as the centroid. Since the mean can only be
-computed for a set of numeric points, such clustering algorithms only
-work with numerical data. 
-
-In reality, the process of grouping these points into two distinct
-clusters is not this straightforward. A visual representation of the
-process can be illustrated as follows:
-
-![](./images_7/dbe03ecd-a57d-4147-8dc5-f918d04a5a88.png)
-
-The process of assigning centroids in the k-means algorithm
-
-In the preceding diagram, the process of assigning the random centroids
-begins in the upper-left corner. As we go down and toward the
-upper-right corner, note how the centroids move closer to the center of
-the two distinct groups. In reality, the algorithm does not have an
-optimal endpoint at which it stops the iteration.
-
-### When does the algorithm stop iterating?
-
-Typically, the algorithm looks for two metrics, in order to stop the
-iteration process:
-
--   The distance between the distinct groups (or clusters) that are
-    formed
--   The distance between each point and the centroid of a cluster
-
-The optimal case of cluster formation is when the distance between the
-distinct groups or clusters are as large as possible, while the
-distances between each point and the centroid of a cluster are as small
-as possible.
-
-
 Implementing the k-means algorithm in scikit-learn
 --------------------------------------------------
-
-* * * * *
 
 Now that you understand how the k-means algorithm works internally, we
 can proceed to implement it in scikit-learn. We are going to work with
@@ -161,18 +92,7 @@ fall into the second group. 
 
 ### The optimal number of clusters
 
-While explaining how the k-means algorithm works, we mentioned how the
-algorithm terminates once it finds the optimal number of clusters. When
-picking clusters arbitrarily using scikit-learn, this is not always the
-case. We need to find the optimal number of clusters, in this case. 
-
-One way that we can do this is by a measure known
-as** inertia. **Inertia measures how close the data points in a cluster
-are to its centroid. Obviously, a lower inertia signifies that the
-groups or clusters are tightly packed, which is good. 
-
-In order to compute the inertia for the model, we use the following
-code:
+In order to compute the inertia for the model, we use the following code:
 
 ```
 # Inertia of present model
@@ -273,13 +193,7 @@ into why four is the ideal number of groups/clusters for this dataset. 
 Feature engineering for optimization
 ------------------------------------
 
-* * * * *
-
-Engineering the features in your dataset is a concept that is
-fundamentally used to improve the performance of your model. Fine-tuning
-the features to the algorithm's design is beneficial, because it can
-lead to an improvement in accuracy, while reducing the generalization
-errors at the same time. The different kinds of feature engineering
+The different kinds of feature engineering
 techniques for optimizing your dataset that you will learn are as
 follows:
 
@@ -907,7 +821,6 @@ A part of the decision tree that was created 
 Summary
 -------
 
-* * * * *
 
 In this lab, you learned about how the k-means algorithm works, in
 order to cluster unlabeled data points into clusters or groups. You then
@@ -919,7 +832,3 @@ and t-SNE, you then learned how to map a multi-dimensional dataset into
 a two-dimensional space. Finally, you learned how to convert an
 unsupervised machine learning problem into a supervised learning one,
 using decision trees. 
-
-In the next (and final) lab, you will learn how to formally evaluate
-the performance of all of the machine learning algorithms that you have
-built so far!
