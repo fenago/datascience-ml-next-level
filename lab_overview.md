@@ -1,11 +1,9 @@
 <img align="right" src="./logo.png">
 
-<h2><span style="color:red;">Machine Learning with scikit-learn</span></h2>
+<h2><span style="color:red;">Next-Level Python for Data Science / Machine Learning</span></h2>
 
 ### Overview
 Deploy supervised and unsupervised machine learning algorithms using scikit-learn to perform classification, regression, and clustering.
-
-### Description
 
 **Key Features**
 
@@ -13,41 +11,41 @@ Deploy supervised and unsupervised machine learning algorithms using scikit-lear
 - Train supervised and unsupervised models using popular techniques such as classification, regression and clustering
 - Understand how scikit-learn can be applied to different types of machine learning problems
 
-**What You Will Learn**
-
-- Learn how to work with all scikit-learn's machine learning algorithms
-- Install and set up scikit-learn to build your first machine learning model
-- Employ Unsupervised Machine Learning Algorithms to cluster unlabelled data into groups
-- Perform classification and regression machine learning
-- Use an effective pipeline to build a machine learning project from scratch
 
 ### Labs
 
 Labs for this course are available at path shared below. Update lab environment DNS and open lab workspaces in Chrome Browser.
 
-1. ##### 
-		* http://<update-DNS>/lab/workspaces/lab1_
-2. ##### 
-		* http://<update-DNS>/lab/workspaces/lab1_
-3. ##### 
-		* http://<update-DNS>/lab/workspaces/lab1_
-4. ##### 
-		* http://<update-DNS>/lab/workspaces/lab1_
-1. ##### 
-		* http://<update-DNS>/lab/workspaces/lab1_
-1. ##### 
-		* http://<update-DNS>/lab/workspaces/lab1_
-1. ##### Introducing Machine Learning with scikit-learn
-		* http://<update-DNS>/lab/workspaces/lab1_Introduction
-2. ##### Predicting Categories with K-Nearest Neighbors
-		* http://<update-DNS>/lab/workspaces/lab2_K_Nearest_Neighbors
-3. ##### Predicting Categories with Logistic Regression
-		* http://<update-DNS>/lab/workspaces/lab3_Logistic_Regression
-4. ##### Predicting Categories with Naive Bayes and SVMs
-		* http://<update-DNS>/lab/workspaces/lab4_Naive_Bayes_SVMs
-5. ##### Predicting Numeric Outcomes with Linear Regression
-		* http://<update-DNS>/lab/workspaces/lab5_Linear_Regression
-6. ##### Classification and Regression with Trees
-		* http://<update-DNS>/lab/workspaces/lab6_Trees
-7. ##### Clustering Data with Unsupervised Machine Learning
-		* http://<update-DNS>/lab/workspaces/lab7_Unsupervised
+1. ##### Introducing pandas
+		* http://<update-DNS>/lab/workspaces/lab1_Pandas
+2. ##### The Series Object
+		* http://<update-DNS>/lab/workspaces/lab2_Series
+3. ##### The DataFrame Object
+		* http://<update-DNS>/lab/workspaces/lab3_DataFrame
+4. ##### Filtering a DataFrame
+		* http://<update-DNS>/lab/workspaces/lab4_Filtering
+5. ##### The GroupBy Object
+		* http://<update-DNS>/lab/workspaces/lab5_GroupBy
+6. ##### Merging, Joining and Concatenating
+		* http://<update-DNS>/lab/workspaces/lab6_Merging
+7. ##### Working with Dates and Times
+		* http://<update-DNS>/lab/workspaces/lab7_Dates
+8. ##### Visualization with Plotly
+		* http://<update-DNS>/lab/workspaces/lab8_Plotly
+9. ##### Introducing Machine Learning with scikit-learn (Theory Only)
+10. ##### Predicting Categories with K-Nearest Neighbors
+		* http://<update-DNS>/lab/workspaces/lab10_K_Nearest_Neighbors
+11. ##### Predicting Categories with Logistic Regression
+		* http://<update-DNS>/lab/workspaces/lab11_Logistic_Regression
+12. ##### Predicting Categories with Naive Bayes and SVMs
+		* http://<update-DNS>/lab/workspaces/lab12_Naive_Bayes_SVMs
+13. ##### Predicting Numeric Outcomes with Linear Regression
+		* http://<update-DNS>/lab/workspaces/lab13_Linear_Regression
+14. ##### Classification and Regression with Trees
+		* http://<update-DNS>/lab/workspaces/lab14_Trees
+15. ##### Clustering Data with Unsupervised Machine Learning
+		* http://<update-DNS>/lab/workspaces/lab15_Unsupervised
+16. ##### Imports and Exports
+		* http://<update-DNS>/lab/workspaces/lab16_Imports_Exports
+17. ##### Configuring Pandas
+		* http://<update-DNS>/lab/workspaces/lab17_Pandas
