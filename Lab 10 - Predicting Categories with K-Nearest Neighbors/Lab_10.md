@@ -89,9 +89,6 @@ redundant to the machine learning process:
     called `isFraud` that flags a transaction as fraud, this
     feature becomes redundant. 
 
- 
-
- 
 
 We can drop these features from the dataset by using the following
 code: 
@@ -484,28 +481,7 @@ evaluation will be discussed at a later stage in the lab. 
 Fine-tuning the parameters of the k-NN algorithm
 ------------------------------------------------
 
-* * * * *
-
-In the previous section, we arbitrarily set the number of neighbors to
-three while initializing the k-NN classifier. However, is this the
-optimal value? Well, it could be, since we obtained a relatively high
-accuracy score in the test set. 
-
-Our goal is to create a machine learning model that does not overfit or
-underfit the data. Overfitting the data means that the model has been
-trained very specifically to the training examples provided and will not
-generalize well to cases/examples of data that it has not encountered
-before. For instance, we might have fit the model very specifically to
-the training data, with the test cases being also very similar to the
-training data. Thus, the model would have been able to perform very well
-and produce a very high value of accuracy. 
-
-Underfitting is another extreme case, in which the model fits the data
-in a very generic way and does not perform well in predicting the
-correct class labels in the test set. This is the exact opposite of
-overfitting. 
-
-Both these cases can be avoided by visualizing how well the model
+Both overfit or underfit cases can be avoided by visualizing how well the model
 performs in the training and test sets by using a different number of
 neighbors. To do this, we first find the optimal number of neighbors by
 using the `GridSearchCV` algorithm. 
@@ -605,11 +581,6 @@ then build a k-NN classifier with one neighbor. 
 Next, we use the `Pipeline()` function and pass in the order
 of the pipeline as the only argument. We then fit this pipeline to the
 training set and extract the accuracy scores from the test set. 
-
-The `Pipeline` function, as the name implies, is used to fit
-multiple functions into a pipeline and execute them in a specified order
-that we think is apt for the process. This function helps us streamline
-and automate common machine learning tasks. 
 
 This resulted in an accuracy score of `0.997`, which is a
 substantial improvement from the score of `0.985`. Thus, we

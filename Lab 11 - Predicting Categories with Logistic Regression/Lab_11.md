@@ -4,11 +4,7 @@
 Lab 11. Predicting Categories with Logistic Regression
 ---------------------------------------------------------
 
-The logistic regression algorithm is one of the most interpretable
-algorithms in the world of machine learning, and although the word
-"regression" implies predicting a numerical outcome, the logistic
-regression algorithm is, used to predict categories and solve
-classification machine learning problems. 
+
 
 In this lab, you will learn about the following:
 
@@ -19,10 +15,6 @@ In this lab, you will learn about the following:
 -   Scaling your data for a potential improvement in accuracy
 -   Interpreting the results of the model
 
-Logistic regression has a wide range of applications, especially in the
-field of finance, where building interpretable machine learning models
-is key in convincing both investors and regulators alike that your model
-makes intuitive and logical sense. 
 
 #### Pre-reqs:
 - Google Chrome (Recommended)
@@ -38,62 +30,6 @@ You can access jupyter lab at `http://<update-DNS>/lab/workspaces/lab11_Logistic
 
 To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
-
-
-Understanding logistic regression mathematically 
--------------------------------------------------
-
-As the name implies, logistic regression is fundamentally derived from
-the linear regression algorithm. The linear regression algorithm will be
-discussed in depth in the upcoming chapters. For now, let's consider a
-hypothetical case in which we want to predict the probability that a
-particular loan will default based on the loan's interest rate. Using
-linear regression, the following equation can be constructed:
-
-`Default = (Interest Rate × x) + c` 
-
-In the preceding equation, *c *is the intercept and *x *is a coefficient
-that will be the output from the logistic regression model. The
-intercept and the coefficient will have numeric values. For the purpose
-of this example, let's assume *c* is 5 and *x *is -0.2. The equation now
-becomes this:
-
-`Default = (Interest Rate × -0.2) + 5` 
-
-The equation can be represented in a two-dimensional plot using the
-following diagram: 
-
-![](./images_3/635a868a-d1dd-42fa-af89-5bb5625b9863.png)
-
-Assuming that the interest rate is 10%, the value of default produced by
-the equation is as follows:
-
-*Default = (10 × -0.2) + 5*
-
-*Default = 3*
-
-The logistic regression model now uses the `logit` function to
-transform this value of 3 into a probability between 0 and 1: 
-
-![](./images_3/6a504f30-cec7-44bb-a907-2463caa3431f.png)
-
-After evaluating the preceding equation, we get an answer of 0.95. In
-other words, using the logistic regression model that we just built
-mathematically, we obtained a probability of 95% that the loan would
-default if the interest rate was 10%. 
-
-After applying the `logit` function to the linear equation,
-the two-dimensional plot shown previously changes to the following
-diagram: 
-
- 
-
-In the preceding diagram, the following is happening:
-
--   The function approaches 1 as the interest rate nears infinity along
-    the *x*-axis.
--   The function approaches 0 as the interest rate nears 0 along the
-    *x*-axis.
 
 
 Implementing logistic regression using scikit-learn
@@ -115,6 +51,9 @@ import pandas as pd
 
 df = pd.read_csv('fraud_prediction.csv')
 ```
+
+**Note:** First copy dataset `fraud_prediction.csv` from previous lab and place in Lab 11 directory.
+
 
 ### Splitting the data into training and test sets
 
