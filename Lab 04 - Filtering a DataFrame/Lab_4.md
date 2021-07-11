@@ -100,7 +100,7 @@ In  [4] employees = pd.read_csv("employees.csv",
 
 
 
-####   Converting Data Types with the as\_type Method
+#### Converting Data Types with the as\_type Method
 
 
 
@@ -650,7 +650,7 @@ is to create two or more Boolean `Series`, then specify the logical
 criteria that must be met between them.
 
 
-####   The AND Condition
+#### The AND Condition
 
 Our next ask is to find all female employees working in business
 development. There are two conditions that must be met for a given row
@@ -728,7 +728,7 @@ Out [30]
 
 
 
-####   The OR Condition
+#### The OR Condition
 
 
 
@@ -778,7 +778,7 @@ a little bit. We\'ll see how we can solve this issue soon.
 
 
 
-####   Inversion with \~
+#### Inversion with \~
 
 
 
@@ -858,7 +858,7 @@ whenever the order of evaluation may be unclear.
 
 
 
-####   Methods for Booleans
+#### Methods for Booleans
 
 
 
@@ -879,7 +879,7 @@ return Boolean `Series`.
 
 
 
-####   The isin Method
+#### The isin Method
 
 
 
@@ -940,7 +940,7 @@ Out [38]
 
 
 
-####   The between Method
+#### The between Method
 
 
 
@@ -1052,7 +1052,7 @@ Out [42]
 
 
 
-####   The isnull and notnull Methods
+#### The isnull and notnull Methods
 
 
 
@@ -1186,7 +1186,7 @@ Out [49]
 
 
 
-####   Dealing with Null Values
+#### Dealing with Null Values
 
 
 
@@ -1351,7 +1351,7 @@ Dealing with Duplicates
 
 
 
-####   The duplicated Method
+#### The duplicated Method
 
 
 
@@ -1465,7 +1465,7 @@ Out [61]
 
 
 
-####   The drop\_duplicates Method
+#### The drop\_duplicates Method
 
 
 
@@ -1696,7 +1696,7 @@ the dataset.
     catalog
 
 
-####   Solutions
+#### Solutions
 
 
 

@@ -4,23 +4,6 @@
 Lab 15. Clustering Data with Unsupervised Machine Learning
 -------------------------------------------------------------
 
-Most of the data that you will encounter out in the wild will not come
-with labels. It is impossible to apply supervised machine learning
-techniques when your data does not come with labels. Unsupervised
-machine learning addresses this issue by grouping data into clusters; we
-can then assign labels based on those clusters.
-
-Once the data has been clustered into a specific number of groups, we
-can proceed to give those groups labels. Unsupervised machine learning
-is the first step that you, as the data scientist, will have to
-implement, before you can apply supervised machine learning techniques
-(such as classification) to make meaningful predictions. 
-
-A common application of the unsupervised machine learning algorithm is
-customer data, which can be found across a wide range of industries. As
-a data scientist, your job is to find groups of customers that you can
-segment and deliver targeted products and advertisements to. 
-
 In this lab, you will learn about the following topics:
 
 -   The k-means algorithm and how it works internally, in order to
@@ -38,23 +21,12 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 **Note:** Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
 
-All Notebooks are present in `work/machine-learning-with-scikit-learn` folder.
+All Notebooks are present in `work/datascience-ml-next-level` folder.
 
-You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab7_Unsupervised`
+You can access jupyter lab at `http://<update-DNS>/lab/workspaces/lab15_Unsupervised`
 
 To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
-
-
-Technical requirements
-----------------------
-
-* * * * *
-
-You will be required to have Python 3.6 or greater, Pandas  ≥
-0.23.4, Scikit-learn ≥ 0.20.0, NumPy ≥ 1.15.1, Matplotlib ≥
-3.0.0, Pydotplus ≥ 2.0.2, Image ≥ 3.1.2, Seaborn ≥ 0.9.0, and SciPy ≥
-1.1.0 installed on your system.
 
 
 The k-means algorithm

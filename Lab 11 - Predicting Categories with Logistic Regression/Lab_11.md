@@ -32,9 +32,9 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 **Note:** Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
 
-All Notebooks are present in `work/machine-learning-with-scikit-learn` folder.
+All Notebooks are present in `work/datascience-ml-next-level` folder.
 
-You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab3_Logistic_Regression`
+You can access jupyter lab at `http://<update-DNS>/lab/workspaces/lab11_Logistic_Regression`
 
 To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 

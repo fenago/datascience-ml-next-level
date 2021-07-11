@@ -16,7 +16,7 @@ use the library to convert strings to dates, add and subtract offsets of
 time, calculate durations, and more. Let\'s dive in.
 
 
-####   How Python works with datetimes
+#### How Python works with datetimes
 
 Let\'s spin up a fresh Jupyter Notebook and import the module along with the `Pandas` library.
 
@@ -252,7 +252,7 @@ Out [16] datetime.timedelta(days=62, seconds=14292)
 
 
 
-####   How pandas works with datetimes
+#### How pandas works with datetimes
 
 A [Timestamp] object is instantiated with the same parameters as a
 [datetime] object. Day-related parameters like [year],
@@ -1712,7 +1712,7 @@ Coding Challenge
 
 
 
-####   Questions
+#### Questions
 
 
 
@@ -1803,7 +1803,7 @@ Here are the challenges for this section:
     dataset.
 
 
-####   Answers
+#### Answers
 
 
 

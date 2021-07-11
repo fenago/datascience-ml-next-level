@@ -27,7 +27,7 @@ one you\'d find in a spreadsheet application like Excel.
 
 
 
-####   Creating A DataFrame from a Dictionary
+#### Creating A DataFrame from a Dictionary
 
 
 
@@ -134,7 +134,7 @@ Population        8600000  2141000    5515000  2873000
 
 
 
-####   Creating A DataFrame from a Numpy ndarray
+#### Creating A DataFrame from a Numpy ndarray
 
 
 
@@ -249,7 +249,7 @@ multiple columns now! Let\'s import our first dataset to try them out!
 
 
 
-####   Importing a CSV File with the read\_csv Method
+#### Importing a CSV File with the read\_csv Method
 
 
 
@@ -328,7 +328,7 @@ In  [12] nba = pd.read_csv("nba.csv", parse_dates = ["Birthday"])
 
 
 
-####   Shared and Exclusive Attributes between Series and DataFrames
+#### Shared and Exclusive Attributes between Series and DataFrames
 
 
 
@@ -524,7 +524,7 @@ Out [24] 2250
 
 
 
-####   Shared Methods between Series and DataFrames
+#### Shared Methods between Series and DataFrames
 
 
 
@@ -735,7 +735,7 @@ We can sort our `DataFrame` by one or more columns with the
 
 
 
-####   Sort by Single Column
+#### Sort by Single Column
 
 
 
@@ -799,7 +799,7 @@ Out [38]
 
 
 
-####   Sort by Multiple Columns
+#### Sort by Multiple Columns
 
 
 
@@ -921,7 +921,7 @@ form.
 
 
 
-####   Sort by Row Index
+#### Sort by Row Index
 
 
 
@@ -979,7 +979,7 @@ In  [45] nba.sort_index(inplace = True)
 
 
 
-####   Sort by Column Index
+#### Sort by Column Index
 
 
 
@@ -1111,7 +1111,7 @@ index. We can easily extract one or more these columns from the
 
 
 
-####   Select a Single Column from a DataFrame
+#### Select a Single Column from a DataFrame
 
 
 
@@ -1198,7 +1198,7 @@ Out [53] Name
 
 
 
-####   Select Multiple Columns from a DataFrame
+#### Select Multiple Columns from a DataFrame
 
 
 
@@ -1298,7 +1298,7 @@ position.
 
 
 
-####   Extract Rows by Index Label
+#### Extract Rows by Index Label
 
 
 
@@ -1453,7 +1453,7 @@ KeyError: 'Bugs Bunny'
 
 
 
-####   Extract Rows by Index Position
+#### Extract Rows by Index Position
 
 
 
@@ -1574,7 +1574,7 @@ Brook Lopez       Milwaukee Bucks        C 1988-04-01  12093024
 
 
 
-####   Extract Values from Specific Columns
+#### Extract Values from Specific Columns
 
 
 

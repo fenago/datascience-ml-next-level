@@ -4,27 +4,12 @@
 Lab 14. Classification and Regression with Trees
 ---------------------------------------------------
 
-Tree based algorithms are very popular for two reasons: they are
-interpretable, and they make sound predictions that have won many
-machine learning competitions on online platforms, such as Kaggle.
-Furthermore, they have many use cases outside of machine learning for
-solving problems, both simple and complex.
-
-Building a tree is an approach to decision-making used in almost all
-industries. Trees can be used to solve both classification- and
-regression-based problems, and have several use cases that make them the
-go-to solution!
 
 This lab is broadly divided into the following two sections:
 
 -   Classification trees
 -   Regression trees
 
-Each section will cover the fundamental theory of different types of
-tree based algorithms, along with their implementation in scikit-learn.
-By the end of this lab, you will have learned how to aggregate
-several algorithms into an **ensemble** and have them vote on what the
-best prediction is.
 
 #### Pre-reqs:
 - Google Chrome (Recommended)
@@ -34,9 +19,9 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 **Note:** Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
 
-All Notebooks are present in `work/machine-learning-with-scikit-learn` folder.
+All Notebooks are present in `work/datascience-ml-next-level` folder.
 
-You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab6_Trees`
+You can access jupyter lab at `http://<update-DNS>/lab/workspaces/lab14_Trees`
 
 To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 

@@ -15,23 +15,6 @@ you will learn about the following:
 -   Fine-tuning the parameters of the k-NN algorithm
 -   Scaling your data for optimized performance
 
-The k-NN algorithm has a wide range of applications in the field of
-classification and supervised machine learning. Some of the real-world
-applications for this algorithm include predicting loan defaults and
-credit-based fraud in the financial industry and predicting whether a
-patient has cancer in the healthcare industry.
-
-This course's design facilitates the implementation of a robust machine
-learning pipeline for each and every algorithm mentioned in the course,
-and a Jupyter Notebook will be required. 
-
-### Note
-
-Each lab in this course comes with a pipeline that is implemented in a
-Jupyter Notebook on the official GitHub repository of this course, and as
-such, it is highly recommended that you install Jupyter Notebook on your
-local machine.
-
 Let's get started.
 
 #### Pre-reqs:
@@ -42,26 +25,15 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 **Note:** Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
 
-All Notebooks are present in `work/machine-learning-with-scikit-learn` folder.
+All Notebooks are present in `work/datascience-ml-next-level` folder.
 
-You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab2_K_Nearest_Neighbors`
+You can access jupyter lab at `http://<update-DNS>/lab/workspaces/lab10_K_Nearest_Neighbors`
 
 To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
 
-Technical requirements
-----------------------
-
-* * * * *
-
-You will be required to have Python 3.6 or greater, Pandas ≥
-0.23.4, Scikit-learn ≥ 0.20.0, NumPy ≥ 1.15.1, and Matplotlib ≥
-3.0.0 installed on your system.
-
 Preparing a dataset for machine learning with scikit-learn
 ----------------------------------------------------------
-
-* * * * *
 
 The first step to implementing any machine learning algorithm with
 scikit-learn is data preparation. Scikit-learn comes with a set of
@@ -71,8 +43,7 @@ and is found on the world's most popular competitive machine learning
 website – Kaggle.
 
 ## Dataset
-Dataset is already downloaded from: [https://www.kaggle.com/ntnu-testimon/paysim1](https://www.kaggle.com/ntnu-testimon/paysim1).
-
+Dataset is already downloaded.
 <span style="color:red;">Extract Dataset!</span>
 
 **Note:** Terminal is already running. You can also open new terminal by clicking:

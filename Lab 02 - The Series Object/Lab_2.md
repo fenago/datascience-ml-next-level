@@ -32,7 +32,7 @@ In  [1] import pandas as pd
 
 
 
-####   Modules, Classes, and Instances
+#### Modules, Classes, and Instances
 
 
 
@@ -99,7 +99,7 @@ can populate it with some data.
 
 
 
-####   Populating the Series with Values
+#### Populating the Series with Values
 
 
 
@@ -215,7 +215,7 @@ are defined.
 
 
 
-####   Customizing the Index
+#### Customizing the Index
 
 
 
@@ -371,7 +371,7 @@ display the index on the left-hand side and the values on the right.
 
 
 
-####   Creating a Series with Missing Values
+#### Creating a Series with Missing Values
 
 In the example below, we create a Series from a list that includes one
 \"missing value\". In the visual output, we can see [NaN] at index
@@ -413,7 +413,7 @@ few sample `Series`.
 
 
 
-####   Dictionaries
+#### Dictionaries
 
 
 
@@ -573,7 +573,7 @@ Out [21] False
 
 
 
-####   Tuples
+#### Tuples
 
 
 
@@ -612,7 +612,7 @@ Out [23] 0    (Red, Green, Blue)
 
 
 
-####   Sets
+#### Sets
 
 A **set** is an unordered collection of unique values. As a reminder,
 the curly brace syntax for declaring a set is identical to that for
@@ -652,7 +652,7 @@ Out [25] 0    Ricky
 
 
 
-####   NumPy Arrays
+#### NumPy Arrays
 
 
 
@@ -1299,7 +1299,7 @@ Out [58] 4
 
 
 
-####   Arithmetic Operations
+#### Arithmetic Operations
 
 
 
@@ -1410,7 +1410,7 @@ Out [65] A    2.0
 
 
 
-####   Broadcasting
+#### Broadcasting
 
 
 
