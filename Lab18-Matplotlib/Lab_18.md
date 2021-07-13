@@ -361,16 +361,16 @@ You can see that the graph is showing the box that represents the inner 50% of a
 
 ### Computing covariance and correlation in Python
 
-Alright, let's get our hands dirty with covariance and correlation here with some actual Python code. So again, you can think conceptually of covariance as taking these multi-dimensional vectors of variances from the mean for each attribute and computing the angle between them as a measure of the covariance. The math for doing that is a lot simpler than it sounds. We're talking about high dimensional vectors. It sounds like Stephen Hawking stuff, but really, from a mathematical standpoint it's pretty straightforward.
+Let's write some actual python code to implement covariance and correlation.
 
-### Computing correlation – The hard way
 
-#### Open Notebook
+#### Computing correlation – The hard way
+
 The Notebook opens in a new browser window. You can create a new notebook or open a local one. Check out the local folder `work` for several notebooks. Open and run `CovarianceCorrelation.ipynb` in the `work` folder.
 
 
 
-I'm going to start by doing this the hard way. NumPy does have a method to just compute the covariance for you, and we'll talk about that later, but for now I want to show that you can actually do this from first principles:
+**Note:** NumPy does have a method to just compute the covariance for you, and we'll talk about that later, but for now I want to show that you can actually do this from first principles:
 
 ```
 %matplotlib inline 
@@ -387,9 +387,7 @@ def covariance(x, y):
     return dot(de_mean(x), de_mean(y)) / (n-1) 
 ```
 
-Covariance, again, is defined as the dot product, which is a measure of the angle between two vectors, of a vector of the deviations from the mean for a given set of data and the deviations from the mean for another given set of data for the same data's data points. We then divide that by n - 1 in this case, because we're actually dealing with a sample.
-
-So de_mean(), our deviation from the mean function is taking in a set of data, x, actually a list, and it's computing the mean of that set of data. The return line contains a little bit of Python trickery for you. The syntax is saying, I'm going to create a new list, and go through every element in x, call it xi, and then return the difference between xi and the mean, xmean, for that entire dataset. This function returns a new list of data that represents the deviations from the mean for each data point.
+de_mean(), our deviation from the mean function is taking in a set of data, x, actually a list, and it's computing the mean of that set of data. The return line contains a little bit of Python trickery for you. The syntax is saying, I'm going to create a new list, and go through every element in x, call it xi, and then return the difference between xi and the mean, xmean, for that entire dataset. This function returns a new list of data that represents the deviations from the mean for each data point.
 
 To expand this example, I'm going to fabricate some data that is going to try to find a relationship between page speeds, that, is how quickly a page renders on a website, and how much people spend. For example, at Amazon we were very concerned about the relationship between how quickly pages render and how much money people spend after that experience. We wanted to know if there is an actual relationship between how fast the website is and how much money people actually spend on the website. This is one way you might go about figuring that out. Let's just generate some normally distributed random data for both page speeds and purchase amounts, and since it's random, there's not going to be a real correlation between them.
 
