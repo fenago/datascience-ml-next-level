@@ -53,7 +53,7 @@ In this exercise, we will read from a dataset. The example here uses the
 2.  Specify the URL of the dataset:
     ```
     #URL of the dataset 
-    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/diamonds.csv"
+    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/datasets/diamonds.csv"
     ```
 
 
@@ -111,7 +111,7 @@ DataFrame. We\'ll be again using the `diamonds` dataset:
 2.  Specify the URL of the dataset:
     ```
     #URL of the dataset 
-    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/diamonds.csv"
+    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/datasets/diamonds.csv"
     ```
 
 
@@ -325,7 +325,7 @@ the following steps:
 2.  Specify the URL of the dataset:
     ```
     #URL of the dataset 
-    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/diamonds.csv"
+    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/datasets/diamonds.csv"
     ```
 
 
@@ -433,7 +433,7 @@ function.Let\'s go through the following steps:
 2.  Specify the URL of the dataset:
     ```
     #URL of the dataset 
-    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/diamonds.csv"
+    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/datasets/diamonds.csv"
     ```
 
 
