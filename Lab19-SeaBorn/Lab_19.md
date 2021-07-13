@@ -1,4 +1,4 @@
-<img align="right" src="../images/logo.png">
+<img align="right" src="../logo.png">
 
 
 Lab 19 : Visualization Using SeaBorn

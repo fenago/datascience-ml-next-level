@@ -49,3 +49,7 @@ Labs for this course are available at path shared below. Update lab environment 
 		* http://<update-DNS>/lab/workspaces/lab16_Imports_Exports
 17. ##### Configuring Pandas
 		* http://<update-DNS>/lab/workspaces/lab17_Pandas
+18. ##### Visualization Using Matplotlib
+		* http://<update-DNS>/lab/workspaces/lab18_Matplotlib
+19. ##### Visualization Using Seaborn
+		* http://<update-DNS>/lab/workspaces/lab19_Seaborn

@@ -1,4 +1,4 @@
-<img align="right" src="../images/logo.png">
+<img align="right" src="../logo.png">
 
 
 Lab 18 : Visualization Using Matplotlib
@@ -17,11 +17,7 @@ We'll be covering the following topics in this lab:
 #### Lab Environment
 Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
 
-**Note:** Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
-
-All Notebooks are present in `work/datascience-machine-learning` folder.
-
-You can access jupyter lab at `http://<host-ip>/lab/workspaces/lab4_Matplotlib`
+You can access jupyter lab at `http://<host-ip>/lab/workspaces/lab18_Matplotlib`
 
 
 
