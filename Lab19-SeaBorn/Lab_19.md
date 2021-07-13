@@ -131,13 +131,13 @@ DataFrame. We\'ll be again using the `diamonds` dataset:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_01.jpg)
+![](./images/C13958_01_01.jpg)
 
 
-    ##### Figure 1.1: Displaying the diamonds dataset
+
 
     The data contains different features of diamonds, such as
     `carat`, `cut` `quality`,
@@ -173,7 +173,7 @@ DataFrame. We\'ll be again using the `diamonds` dataset:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     ```
     (53940, 10)
@@ -193,13 +193,13 @@ DataFrame. We\'ll be again using the `diamonds` dataset:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_02.jpg)
+![](./images/C13958_01_02.jpg)
 
 
-    ##### Figure 1.2: Using the describe function to show continuous variables
+
 
     This works for continuous variables. However, for categorical
     variables, we need to use the `include=object` parameter.
@@ -213,13 +213,13 @@ DataFrame. We\'ll be again using the `diamonds` dataset:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_03.jpg)
+![](./images/C13958_01_03.jpg)
 
 
-    ##### Figure 1.3: Use the describe function to show categorical variables
+
 
     Now, what if you would want to see the column types and how much
     memory a DataFrame occupies?
@@ -232,7 +232,7 @@ DataFrame. We\'ll be again using the `diamonds` dataset:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
 <div>
 
@@ -242,7 +242,7 @@ DataFrame. We\'ll be again using the `diamonds` dataset:
 
 </div>
 
-##### Figure 1.4: Information on the diamonds dataset
+
 
 The preceding figure shows the data type (`float64`,
 `object`, `int64`..) of each of the columns, and
@@ -286,7 +286,7 @@ The output is as follows:
 
 </div>
 
-##### Figure 1.5: Selecting specific columns from a DataFrame
+
 
 Here, we obtain indices of rows that meet the criterion:
 
@@ -355,13 +355,13 @@ the following steps:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_06.jpg)
+![](./images/C13958_01_06.jpg)
 
 
-    ##### Figure 1.6: Simple addition of columns
+
 
     Similarly, we can also use addition, subtraction, and other
     mathematical operators on two numeric columns.
@@ -383,7 +383,7 @@ the following steps:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
 <div>
 
@@ -393,7 +393,7 @@ the following steps:
 
 </div>
 
-##### Figure 1.7: Conditional addition of columns
+
 
 Therefore, we have successfully added two new columns to the dataset.
 
@@ -477,13 +477,13 @@ function.Let\'s go through the following steps:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_08.jpg)
+![](./images/C13958_01_08.jpg)
 
 
-    ##### Figure 1.8: Dataset after applying simple and complex functions
+
 
     In this case, the function we wanted for rounding off to the ceil
     was already present in an existing library. However, there might be
@@ -505,13 +505,13 @@ function.Let\'s go through the following steps:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_09.jpg)
+![](./images/C13958_01_09.jpg)
 
 
-    ##### Figure 1.9: Dataset after applying the lambda function
+
 
     Not all functions can be written as one-liners and it is
     important to know how to include user-defined functions in the
@@ -532,13 +532,13 @@ function.Let\'s go through the following steps:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_10.jpg)
+![](./images/C13958_01_10.jpg)
 
 
-##### Figure 1.10: Dataset after applying a user-defined function
+
 
 Interesting! Now, we had created an user-defined function to add a
 column to the dataset.
@@ -588,13 +588,13 @@ value will be `yes` if our criteria are satisfied and
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_11.jpg)
+![](./images/C13958_01_11.jpg)
 
 
-##### Figure 1.11: Dataset after applying the function on multiple columns
+
 
 The new column `desired` is added!
 
@@ -673,13 +673,13 @@ DataFrame. Here, we\'ll be using the `diamonds` dataset:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_12.jpg)
+![](./images/C13958_01_12.jpg)
 
 
-##### Figure 1.12: Dataset after deleting columns
+
 
 ### Note
 
@@ -740,13 +740,13 @@ In this exercise, we will write a `diamonds` DataFrame to a
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_13.jpg)
+![](./images/C13958_01_13.jpg)
 
 
-    ##### Figure 1.13: The generated .csv file in the source folder
+
 
     By default, the `to_csv` function outputs a file that
     includes column headers as well as row numbers. Generally, the row
@@ -850,13 +850,13 @@ specifications on the *x*-axis:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_14.jpg)
+![](./images/C13958_01_14.jpg)
 
 
-    ##### Figure 1.14: Histogram plot
+
 
     The *y* axis in this plot denotes the number of diamonds in the
     dataset with the `carat` specification on the *x*-axis.
@@ -875,13 +875,13 @@ specifications on the *x*-axis:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_15.jpg)
+![](./images/C13958_01_15.jpg)
 
 
-    ##### Figure 1.15: Histogram with bins = 50
+
 
     This is a histogram with `50` bins. Notice how we can see
     a more fine-grained distribution as we increase the number of bins.
@@ -898,13 +898,13 @@ specifications on the *x*-axis:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_16.jpg)
+![](./images/C13958_01_16.jpg)
 
 
-    ##### Figure 1.16: Histogram plot using seaborn
+
 
     There are two noticeable differences between the `pandas`
     `hist` function and `seaborn`
@@ -934,13 +934,13 @@ specifications on the *x*-axis:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_17.jpg)
+![](./images/C13958_01_17.jpg)
 
 
-    ##### Figure 1.17: Histogram plot with KDE = false
+
 
     Also note that the `bins` parameter seemed to render a
     more detailed plot when the bin size was increased from
@@ -954,13 +954,13 @@ specifications on the *x*-axis:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_18.jpg)
+![](./images/C13958_01_18.jpg)
 
 
-    ##### Figure 1.18: Histogram plot with increased bin size
+
 
     The histogram with `100` bins shows a better visualization
     of the distribution of the variable---we see there are several peaks
@@ -983,7 +983,7 @@ specifications on the *x*-axis:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
 <div>
 
@@ -993,7 +993,7 @@ specifications on the *x*-axis:
 
 </div>
 
-##### Figure 1.19: Histogram using a log transformation
+
 
 That\'s pretty neat. Looking at the histogram, even
 a naive viewer immediately gets a picture of the distribution of the
@@ -1106,10 +1106,10 @@ To do so, let\'s go through the following steps:
     The output will be as follows:
 
     
-    ![](./images/C13958_01_20.jpg)
+![](./images/C13958_01_20.jpg)
 
 
-    ##### Figure 1.20: Table using the crosstab function
+
 
 6.  Pass these counts to another `pandas` function,
     `plot(kind='bar')`:
@@ -1122,10 +1122,10 @@ To do so, let\'s go through the following steps:
     The output will be as follows:
 
     
-    ![](./images/C13958_01_21.jpg)
+![](./images/C13958_01_21.jpg)
 
 
-    ##### Figure 1.21: Bar plot using a pandas DataFrame
+
 
     We see that most of the diamonds in the dataset are of the
     `Ideal` cut quality, followed by `Premium`,
@@ -1142,10 +1142,10 @@ To do so, let\'s go through the following steps:
     The output will be as follows:
 
     
-    ![](./images/C13958_01_22.jpg)
+![](./images/C13958_01_22.jpg)
 
 
-    ##### Figure 1.22: Bar plot using seaborn
+
 
     Notice how the `catplot()` function does not require us to
     create the intermediate count table (using
@@ -1166,10 +1166,10 @@ To do so, let\'s go through the following steps:
     The output will be as follows:
 
     
-    ![](./images/C13958_01_23.jpg)
+![](./images/C13958_01_23.jpg)
 
 
-    ##### Figure 1.23: Bar plot with the mean price distribution
+
 
     Here, the black lines (*error bars*) on the rectangles indicate the
     uncertainty (or spread of values) around the mean estimate. By
@@ -1188,10 +1188,10 @@ To do so, let\'s go through the following steps:
     The output will be as follows:
 
     
-    ![](./images/C13958_01_24.jpg)
+![](./images/C13958_01_24.jpg)
 
 
-##### Figure 1.24: Bar plot with proper order
+
 
 Grouped bar plots can be very useful for
 visualizing the variation of a particular feature within different
@@ -1232,7 +1232,7 @@ to look at the variation in each color:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
 <div>
 
@@ -1242,7 +1242,7 @@ to look at the variation in each color:
 
 </div>
 
-##### Figure 1.25: Grouped bar plot with legends
+
 
 Here, we can observe that the price patterns for diamonds of different
 colors are similar for each cut quality. For instance, for
@@ -1291,13 +1291,13 @@ feature:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_26.jpg)
+![](./images/C13958_01_26.jpg)
 
 
-    ##### Figure 1.26: Nested bar plot with the hue parameter
+
 
 4.  Place the legend appropriately on the bar plot:
 
@@ -1307,13 +1307,13 @@ feature:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_27.jpg)
+![](./images/C13958_01_27.jpg)
 
 
-    ##### Figure 1.27: Grouped bar plot with legends placed appropriately
+
 
     In the preceding `ax.legend()` call, the `ncol`
     parameter denotes the number of columns into which values in the
@@ -1332,13 +1332,13 @@ feature:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_28.jpg)
+![](./images/C13958_01_28.jpg)
 
 
-    ##### Figure 1.28: Grouped bar plot with modified labels
+
 
 6.  Similarly, use this to modify the font-size and
     rotation of the *x* axis of the tick labels:
@@ -1351,7 +1351,7 @@ feature:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
 <div>
 
@@ -1361,7 +1361,7 @@ feature:
 
 </div>
 
-##### Figure 1.29: Grouped bar plot with the rotation feature of the labels
+
 
 The *rotation feature* is particularly useful when the tick labels are
 long and crowd up together on the *x* axis.
@@ -1407,13 +1407,13 @@ above the plot. Let\'s see how:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_30.jpg)
+![](./images/C13958_01_30.jpg)
 
 
-    ##### Figure 1.30: Bar plot with seaborn\'s catplot function
+
 
 4.  Annotate the column belonging to the `Ideal` category:
     ```
@@ -1463,13 +1463,13 @@ above the plot. Let\'s see how:
     ```
 
 
-    The output is as follows:
+The output is as follows:
 
     
-    ![](./images/C13958_01_31.jpg)
+![](./images/C13958_01_31.jpg)
 
 
-##### Figure 1.31: Annotated bar plot
+
 
 At this stage, we will go through a lab activity to revise the
 concepts in this lab.
@@ -1524,7 +1524,7 @@ After Step 1:
 
 </div>
 
-##### Figure 1.32: Olympics dataset
+
 
 After Step 2:
 
@@ -1536,7 +1536,7 @@ After Step 2:
 
 </div>
 
-##### Figure 1.33: Filtered Olympics DataFrame
+
 
 After Step 3:
 
@@ -1548,7 +1548,7 @@ After Step 3:
 
 </div>
 
-##### Figure 1.34: The number of medals awarded
+
 
 After Step 4:
 
@@ -1560,7 +1560,7 @@ After Step 4:
 
 </div>
 
-##### Figure 1.35: Olympics DataFrame
+
 
 After Step 5:
 
@@ -1572,7 +1572,7 @@ After Step 5:
 
 </div>
 
-##### Figure 1.36: Generated bar plot
+
 
 After Step 6:
 
@@ -1584,7 +1584,7 @@ After Step 6:
 
 </div>
 
-##### Figure 1.37: Histogram plot with the Age feature
+
 
 After Step 7:
 
@@ -1596,7 +1596,7 @@ After Step 7:
 
 </div>
 
-##### Figure 1.38: Bar plot with the number of medals won
+
 
 After Step 8:
 
@@ -1608,7 +1608,7 @@ After Step 8:
 
 </div>
 
-##### Figure 1.39: Bar plot with the average weight of players
+
 
 The bar plot indicates the highest athlete weight in rowing, followed by
 swimming, and then the other remaining sports. The trend is similar
