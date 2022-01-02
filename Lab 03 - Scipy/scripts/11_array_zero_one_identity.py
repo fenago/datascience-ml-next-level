@@ -1,12 +1,3 @@
-"""
-  Name     : 4375OS_06_11_array_zeros_ones_identity.py
-  Book     : Python for Finance
-  Publisher: Packt Publishing Ltd. 
-  Author   : Yuxing Yan
-  Date     : 12/26/2013
-  email    : yany@canisius.edu
-             paulyxy@hotmail.com
-"""
 
 
 import numpy as np

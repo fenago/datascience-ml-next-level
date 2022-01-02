@@ -1,12 +1,3 @@
-"""
-  Name     : 4375OS_06_19_logic_array.py
-  Book     : Python for Finance
-  Publisher: Packt Publishing Ltd. 
-  Author   : Yuxing Yan
-  Date     : 12/26/2013
-  email    : yany@canisius.edu
-             paulyxy@hotmail.com
-"""
 
 import numpy as np
 x=np.array([True,False,True,False],bool)

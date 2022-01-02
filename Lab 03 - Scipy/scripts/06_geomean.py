@@ -1,12 +1,3 @@
-"""
-  Name     : 4375OS_06_06_geomean.py
-  Book     : Python for Finance
-  Publisher: Packt Publishing Ltd. 
-  Author   : Yuxing Yan
-  Date     : 12/26/2013
-  email    : yany@canisius.edu
-             paulyxy@hotmail.com
-"""
 
 import scipy as sp
 ret=sp.array([0.1,0.05,-0.02])

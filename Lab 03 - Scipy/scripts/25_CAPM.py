@@ -1,12 +1,3 @@
-"""
-  Name     : 4375OS_06_25_CAPM.py
-  Book     : Python for Finance
-  Publisher: Packt Publishing Ltd. 
-  Author   : Yuxing Yan
-  Date     : 12/26/2013
-  email    : yany@canisius.edu
-             paulyxy@hotmail.com
-"""
 
 from scipy import stats
 stock_ret = [0.065, 0.0265, -0.0593, -0.001,0.0346]

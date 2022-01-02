@@ -1,18 +1,15 @@
 
 <img align="right" src="./logo.png">
 
-Lab 1. Python Scripting Overview
----------------------------------------------
+Lab 1. Python Overview
+-----------------------
 
 
 This lab will cover the following topics:
 
-
--   Python scripting
--   Installing and using Python and various tools
+-   Using Python and various tools
 -   Variables, numbers, and strings
--   Python supported data structures and how to use all of these
-    concepts in a script
+-   Python supported data structures and how to use all of these concepts in a script
 -   Decision making; that is, the `if` statement
 -   Looping statements; that is, the `for` and `while` loops
 -   Functions
@@ -40,20 +37,7 @@ Terminal and press [*Enter*].
 
 ### Writing scripts with the Python interactive console
 
-
-
-The Python interactive console starts from `>>> prefix`. This
-console will accept the Python commands,
-which you\'ll write after `>>> prefix`. Refer to the following
-screenshot:
-
-
-![](./images/1da996cf-a362-4963-b58b-3674103d4c14.png)
-
-
- 
-
-Now, we will see how to assign values to the variable, as in the
+We will see how to assign values to the variable, as in the
 following example:
 
 
@@ -170,42 +154,15 @@ After importing the `time` module, we get the `>>>`
 prefix. This means that the module exists and this command gets executed
 successfully:
 
-
-```
->>> import matplotlib
-```
-
-If the module doesn\'t exist, then you will get `Traceback`
-error:
-
-
-```
-File "<stdin>", line 1, in <module>
-ImportError: No module named 'matplotlib'
-```
-
-So here, `matplotlib` isn\'t available, so it gives an error:
-`ImportError: No module named 'matplotlib'.`
-
-To solve this error, we will have to install `matplotlib` and
-then again try to import `matplotlib`. After installing
-`matplotlib`, you should be able to import the module, as
-follows:
-
-
 ```
 >>> import matplotlib
 >>>
 ```
 
 
-
 #### The keyboard shortcut
 
-
-
-The keyboard shortcut, [*Ctrl + D,*] will give you the
-following code:
+The keyboard shortcut, [*Ctrl + D,*] will give you the following code:
 
 
 ```
@@ -348,9 +305,6 @@ the preceding example, `name` and `address` are
 `strings`, age is an integer, and percentage is a floating
 type.
 
- 
-
- 
 
 Multiple assignments for the same value can be done as follows:
 
@@ -378,8 +332,6 @@ to them, respectively.
 
 ### Numbers
 
-
-
 The Python interpreter can also act as a
 calculator. You just have to type an expression and it will return the
 value. Parentheses `( )` are used to do the grouping, as shown
@@ -399,13 +351,6 @@ in the following example:
 
 The integer numbers are of the `int`type and a fractional part
 is of the `float` type.
-
-
-### Note
-
-In Python, the division (`/`) operation always returns a float
-value. The `floor` division (`//`) gets an integer
-result. The `%` operator is used to calculate the remainder.
 
 
 Consider the following example:
@@ -512,37 +457,8 @@ del num_a, num_b
 
 
 
-In some situations, you need to convert a
-number explicitly from one type to another to satisfy some requirements.
-Python does this internally in an expression
-
-
--   Type `int(a)` to convert `a` into an integer
--   Type `float(a)` to convert `a` into a
-    floating-point number
--   Type `complex(a)` to convert `a` into a complex
-    number with real part `x` and imaginary part
-    `zero`
--   Type `complex(a, b)` to convert `a` and
-    `b` into a complex number with real part `a` and
-    imaginary part `b`. `a` and `b` are
-    numeric expressions
-
-
-
 Strings
--------------------------
-
-
-
-Like numbers, strings are also one of the
-data structures in Python. Python can manipulate strings. Strings can be
-expressed as follows:
-
-
--   Enclosed in single quotes (`'...'`)
--   Enclosed in double quotes (`"..."`)
-
+-------
 
 See the following example:
 
@@ -625,13 +541,6 @@ to break them. Here is an example:
 
 ### String slicing
 
-
-
-Strings support slicing, which means getting characters by a specified
-range from your string. Let\'s take a look at the
-following example. Note that starting index
-value is always included and an end value is always excluded.
-
 Consider a string, `str = "Programming":`
 
 
@@ -684,8 +593,6 @@ str2[1:5]: bjec
 
 ### Updating strings
 
-
-
 We can update a string by reassigning a new value to the specified
 index. Refer to the following example:
 
@@ -700,30 +607,8 @@ Updated String: - Hello John
 ```
 
 
-### Escape characters
-
-
-
-Python supports escape characters that are non-printable and can be
-represented with a backslash notation. An
-escape character gets interpreted in both single and double quoted
-strings:
-
-![](./images/1.PNG)
-
-### Special string operators
-
-
-
-The following table shows string\'s special
-operators. Consider `a` is `Hello` and `b`
-is `World`:
-
-![](./images/2.PNG)
 
 ### %  string formatting operator
-
-
 
 `%` is a string formatting operator in Python. Refer to the
 following example:
@@ -744,8 +629,6 @@ The following table shows a list of symbols used along with
 ![](./images/3.PNG)
 
 ### Triple quotes in Python
-
-
 
 Python\'s triple quotes functionality for strings is used to span
 multiple lines, including newlines and tabs. The syntax for triple
@@ -805,24 +688,7 @@ Welcome John
 
 
 Understanding lists
--------------------------------------
-
-
-
-Python supports a data structure called `list`, which is a
-mutable and ordered sequence of elements.
-Each element in that list is called as item. Lists are defined by
-inserting values between square brackets `[ ]`. Each element
-of `list` is given a number, which we call as a position or
-index. The index starts from zero; that is, the first index is zero, the
-second index is 1, and so on. We can perform the following operations on
-lists: indexing, slicing, adding, multiplying, and checking for
-membership.
-
-Python\'s built-in `length` function returns the length of
-that list. Python also has function for finding the largest and smallest
-item of `list`. Lists can be numbered lists, string lists, or
-mixed list.
+-------------------
 
 The following is the code for creating a list:
 
@@ -877,10 +743,7 @@ Mumbai
 
 ### Updating lists
 
-
-
-You can update elements of lists, as shown in
-the following code:
+You can update elements of lists, as shown in the following code:
 
 
 ```
@@ -920,25 +783,7 @@ Before deleting: ['Mumbai', 'Bangalore', 'Chennai', 'Pune']
 After deleting: ['Mumbai', 'Bangalore', 'Pune']
 ```
 
-
-### Basic list operations
-
-
-
-There are five basic list operations:
-
-
--   Concatenation
--   Repetition
--   Length
--   Membership
--   Iteration
-
-![](./images/4.PNG)
-
 ### List operations
-
-
 
 In this section, we are going to learn about basic list operations: concatenation and repetition.
 
@@ -966,8 +811,6 @@ times:
 
 
 ### Indexing, slicing, and matrices
-
-
 
 List indices work the same way as string
 indices. Values can be accessed using
@@ -1085,14 +928,8 @@ Pune
 (2, 3, 4, 5)
 ```
 
- 
-
- 
-
 
 ### Updating tuples
-
-
 
 Tuple updating is not possible in Python, as tuples are immutable. But
 you can create a new tuple with an existing
@@ -1135,26 +972,7 @@ print ("After deleting: ", cities)
 NameError: name 'cities' is not defined
 ```
 
-
-### Basic tuple operations
-
-
-
-Like lists, there are five basic tuple
-operations:
-
-
--   Concatenation
--   Repetition
--   Length
--   Membership
--   Iteration
-
-![](./images/6.PNG)
-
 ### Indexing, slicing, and matrices
-
-
 
 Tuple indices work the same way as list
 indices. Values can be accessed using index. If you try to
@@ -1206,15 +1024,6 @@ Sets
 ----------------------
 
 
-
-A set is an unordered collection of elements
-with no duplicates. The basic use of a set is to check membership
-testing and eliminate duplicate entries. These set objects support
-mathematical operations, such as union, intersection, difference, and
-symmetric difference. We can create a set using curly braces or the
-`set()` function. If you want create an empty set, then use
-`set()`, not `{}`.
-
 Here is a brief demonstration:
 
 
@@ -1240,13 +1049,9 @@ False
 >>> a ^ b
 {'r', 'd', 'b', 'm', 'z', 'l'}
 ```
-
  
 
- 
-
-Set comprehensions are also supported in Python. Refer to the following
-code:
+Set comprehensions are also supported in Python. Refer to the following code:
 
 
 ```
@@ -1259,20 +1064,7 @@ code:
 Dictionaries
 ------------------------------
 
-
-
-A dictionary is a data type in Python, which consists of key value pairs and is enclosed in curly braces
-`{}`. Dictionaries are unordered and indexed by keys, where
-each key must be unique. These keys must be immutable type. Tuples can
-be used as keys if they contain only strings, numbers, or tuples.
-
-Just a pair of braces creates an empty dictionary: `{ }`. The
-main operations on a dictionary are storing a value with some key and
-extracting the value given to the key. It is also possible to delete a
-key value pair with `del`. If you store using a key that is
-already in use, the old value associated with that key is forgotten. It
-is an error to extract a value using a non-existent key. Here is a small
-example using a dictionary:
+Here is a example using a dictionary:
 
 
 ```
@@ -1331,8 +1123,6 @@ parsing arguments and the module used to parse arguments.
 
 ### Command-line arguments in Python
 
-
-
 We can start a program with additional
 arguments, in the command line. Python programs can start with
 command-line arguments. Let\'s look at an example:
@@ -1350,8 +1140,6 @@ Now, we are going to use modules to get the arguments:
 
 ### Sys.argv
 
-
-
 The `sys` module is used to access command-line parameters. The
 `len(sys.argv)` function contains the number of arguments. To
 print all of the arguments, simply execute `str(sys.argv)`.
@@ -1359,13 +1147,14 @@ Let\'s have a look at an example: 
 
 
 ```
-01.py
 import sys
 print('Number of arguments:', len(sys.argv))
 print('Argument list:', str(sys.argv))
+```
 
-Output:
-Python3 01.py img
+**Output:**
+```
+python3 01.py img
 Number of arguments 2
 Arguments list: ['01.py', 'img']
 ```
@@ -1376,20 +1165,11 @@ Decision making
 ---------------------------------
 
 
-
-When we want to execute a code block when the
-condition is `true`, decision making comes to the rescue. The
-`if...elif...else` statement is used in Python for decision
-making.
-
-
-
 ### Python if statement syntax
 
 
 
-The following is the syntax for the
-`if` statement:
+The following is the syntax for the `if` statement:
 
 
 ```
@@ -1397,10 +1177,6 @@ if test_expression:
     statement(s)
 ```
 
-Here, the program evaluates the test expression and will execute
-`statement(s)` only if the text expression is
-`true`. If the text expression is `false`,
-`statement(s)` isn\'t executed.
 
 In Python, the body of the `if` statement is indicated by the
 indentation. The body starts with an indentation and the first
@@ -1424,7 +1200,6 @@ This statement is always printed.
 
 
 ### Python if\...else statement syntax
-
 
 
 In this section, we are going to learn about
@@ -1477,12 +1252,6 @@ else:
     else block statements
 ```
 
-`elif` is short for `else if`. It allows us to check
-for multiple expressions. If the condition written in the `if`
-statement is `false`, then it will check the condition of the
-next `elif` block, and so on. If all of the conditions are
-`false`, the body of `else` is executed.
-
 Only one block among the several `if...elif...else` blocks is
 executed according to the condition. The `if` block can have
 only one else block. But it can have multiple `elif` blocks.
@@ -1508,23 +1277,7 @@ Loops
 -----------------------
 
 
-
-To handle all of the looping requirements in
-your script, Python supports two loops:
-
-
--   `for loop`
--   `while loop`
-
-
-Now, we are going to learn about `for loop` and
-`while loop`.
-
-
-
 ### for loop
-
-
 
 `for loop` iterates over each item of the
 sequence or any other iterable object and it
@@ -1602,8 +1355,7 @@ The number is 4
 ```
 
 
-### while loop
-
+### While loop
 
 
 `while` is a looping statement that will iterate over a block of code until the entered test
@@ -1656,14 +1408,6 @@ The sum is 55
 Iterators
 ---------------------------
 
-
-
-In Python, an iterator is an object that can be iterated upon. It is an
-object that will return data, one element at
-a time. Python\'s iterator object implements two methods,
-`__iter__()` and `__next__()`. Mostly, iterators are
-implemented within loops, generators, and comprehensions.
-
 In the following example, we are using the `next()` function,
 which will iterate through all of the items. After reaching the end and
 there is no more data to be returned, it will raise
@@ -1706,8 +1450,6 @@ object that we can iterate over.
 
 
 ### How to create a generator in Python?
-
-
 
 Creating a generator is easy in Python. You
 can create a generator just by defining a
@@ -1809,15 +1551,6 @@ Output:
 ### Lambda functions
 
 
-
-In Python, an anonymous function is a function that is defined without a
-name and is called a `lambda` function, as it is defined using
-a keyword `lambda`. We use these functions whenever we require
-a function for a short period of time.
-
-Lambda functions are used along with built-in
-functions, such as `filter()`, and `map()`.
-
 The filter() function returns a list of elements and has only one
 iterable as input. The following shows an example using
 `filter():`
@@ -1896,8 +1629,7 @@ Summary
 -------------------------
 
 
-
-In this lab, we\'ve given an overview of the Python scripting
+In this lab, we\'ve given an overview of the Python
 language. We have learned about how to install Python and various tools.
 We also learned about the Python interpreter and how to use it. We
 learned about Python-supported data types, variables, numbers and
