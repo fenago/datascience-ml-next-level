@@ -12,7 +12,7 @@ Labs for this course are available at endpoints shared below. Open following URL
 		* http://localhost/lab/workspaces/lab1_introduction
 2. ##### Getting Your Big Data into the Spark Environment Using RDDs
 		* http://localhost/lab/workspaces/lab2_rdd
-3. ##### Big Data Cleaning and Wrangling with Spark Notebooks
+3. ##### Big Data Cleaning and Wrangling with Spark
 		* http://localhost/lab/workspaces/lab3_cleaning
 5. ##### Powerful Exploratory Data Analysis with MLlib
 		* http://localhost/lab/workspaces/lab5_mlib
