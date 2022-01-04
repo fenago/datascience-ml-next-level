@@ -1,7 +1,7 @@
 
 <img align="right" src="./logo.png">
 
-Lab 1. Python Overview
+Lab 1. Python Review
 -----------------------
 
 
@@ -28,12 +28,6 @@ $ python
 ```
 
 This will start the default Python interactive console.
-
-In Linux, if we write `Python` in the Terminal,
-the `python2.7` console starts. If you want to start
-the `python3` console, then enter `python3` in the
-Terminal and press [*Enter*].
-
 
 ### Writing scripts with the Python interactive console
 
@@ -1626,8 +1620,7 @@ Output:
 
 
 Summary
--------------------------
-
+-------
 
 In this lab, we\'ve given an overview of the Python
 language. We have learned about how to install Python and various tools.
@@ -1638,9 +1631,8 @@ We also learned about functions and how to use them in scripts and
 modules and how to create and import them.
 
 
-
 Questions
----------------------------
+---------
 
 
 1.  What are iterators and generators ?
