@@ -1,6 +1,6 @@
 
-Filtering a DataFrame
-=======================
+Lab 6: Filtering a DataFrame
+============================
 
 ### This lab covers:
 

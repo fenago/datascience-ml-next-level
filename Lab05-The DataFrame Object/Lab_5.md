@@ -1,6 +1,6 @@
 
-The DataFrame object
-======================
+Lab 5: The DataFrame object
+===========================
 
 ### This lab covers:
 
