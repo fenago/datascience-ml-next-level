@@ -181,32 +181,10 @@ The output is as follows:
 ![](./images/C13958_01_02.jpg)
 
 
+This works for continuous variables. However, for categorical variables, we need to use the `include=object` parameter.
 
 
-    This works for continuous variables. However, for categorical
-    variables, we need to use the `include=object` parameter.
-
-7.  Use `include=object` inside the `describe`
-    function for categorical variables ( `cut`,
-    `color`, `clarity`):
-
-    ```
-    diamonds_df.describe(include=object)
-    ```
-
-
-The output is as follows:
-
-    
-![](./images/C13958_01_03.jpg)
-
-
-
-
-    Now, what if you would want to see the column types and how much
-    memory a DataFrame occupies?
-
-8.  To obtain information on the dataset, use the `info()`
+7.  To obtain information on the dataset, use the `info()`
     method:
 
     ```
@@ -216,19 +194,7 @@ The output is as follows:
 
 The output is as follows:
 
-
-
 ![](./images/C13958_01_04.jpg)
-
-
-
-
-
-The preceding figure shows the data type (`float64`,
-`object`, `int64`..) of each of the columns, and
-memory (`4.1MB`) that the DataFrame occupies. It also tells
-the number of rows (`53940`) present in the DataFrame.
-
 
 
 Selecting Columns from a DataFrame

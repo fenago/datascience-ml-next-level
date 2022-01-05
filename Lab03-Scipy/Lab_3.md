@@ -1002,7 +1002,7 @@ Let us consider the following example.
 ```
 from scipy.special import cbrt
 res = cbrt([10, 9, 0.1254, 234])
-print res
+print(res)
 ```
 
 The above program will generate the following output.
@@ -1018,7 +1018,7 @@ The syntax of the exponential function is -- scipy.special.exp10(x). Let us cons
 ```
 from scipy.special import exp10
 res = exp10([2, 9])
-print res
+print(res)
 ```
 
 The above program will generate the following output.
@@ -1039,7 +1039,7 @@ from scipy.special import logsumexp
 import numpy as np
 a = np.arange(10)
 res = logsumexp(a)
-print res
+print(res)
 ```
 
 The above program will generate the following output.
@@ -1059,7 +1059,7 @@ scipy.special.comb(N,k). Let us consider the following example −
 ```
 from scipy.special import comb
 res = comb(10, 3, exact = False,repetition=True)
-print res
+print(res)
 ```
 
 The above program will generate the following output.
@@ -1077,7 +1077,7 @@ Let us consider the following example.
 ```
 from scipy.special import perm
 res = perm(10, 3, exact = True)
-print res
+print(res)
 ```
 
 The above program will generate the following output.
