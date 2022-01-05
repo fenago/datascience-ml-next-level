@@ -3,17 +3,15 @@
 <h2><span style="color:red;">Next-Level Python for Data Science / Machine Learning</span></h2>
 
 ### Overview
-Pandas, Numpy, Scipy, Visualization using Matplotlib/Seaborn, Machine learning using scikit-learn and Spark jobs.
+Pandas, Numpy, Scipy, Visualization using Matplotlib/Seaborn and Machine learning using scikit-learn.
 
 **Key Features**
 
 - Using Scipy and NumPy
+- Pandas and DataFrame
 - Visualization using Matplotlib/Seaborn
 - Build your first machine learning model using scikit-learn
 - Tensorflow and Keras Overview
-- Analyze patterns with Spark SQL to improve your business intelligence
-- Use PySpark's interactive shell to speed up development time
-
 
 ### Labs
 
