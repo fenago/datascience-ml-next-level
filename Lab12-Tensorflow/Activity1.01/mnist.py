@@ -10,7 +10,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Convolution2D, Flatten, Dense, Dropout
 import datetime
 
-from keras.optimizers import adam
+from keras.optimizers import adam_v2
 
 
 # In[17]:

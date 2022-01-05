@@ -97,7 +97,7 @@ to set up this exercise:
     command:
 
     ```
-    $ tensorboard --logdir logs/fit
+    $ tensorboard --logdir logs/fit --bind_all
     ```
 
     The output is as follows:

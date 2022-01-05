@@ -14,24 +14,6 @@ By the end of this lab, you will be able to:
 Handling Data with pandas DataFrame
 ===================================
 
-Data tables can be stored in the DataFrame object available in
-`pandas`, and data in multiple formats (for example,
-`.csv`, `.tsv`, `.xlsx`, and
-`.json`) can be read directly into a DataFrame.
-
-
-Reading Data from Files
------------------------
-
-Most small-to medium-sized datasets are usually available or shared as
-delimited files such as **comma-separated values** (**CSV**),
-**tab-separated values** **(TSV**), **Excel** (**.xslx**), and JSON
-files. Pandas provides built-in I/O functions to read files in several
-formats, such as, `read_csv`, `read_excel`, and
-`read_json`, and so on into a DataFrame. In this section, we
-will use the `diamonds` dataset
-
-### Note
 
 The datasets used here can be found in `datasets` directory.
 
@@ -53,7 +35,7 @@ In this exercise, we will read from a dataset. The example here uses the
 2.  Specify the URL of the dataset:
     ```
     #URL of the dataset 
-    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/datasets/diamonds.csv"
+    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab10-SeaBorn/datasets/diamonds.csv"
     ```
 
 
@@ -111,7 +93,7 @@ DataFrame. We\'ll be again using the `diamonds` dataset:
 2.  Specify the URL of the dataset:
     ```
     #URL of the dataset 
-    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/datasets/diamonds.csv"
+    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab10-SeaBorn/datasets/diamonds.csv"
     ```
 
 
@@ -234,13 +216,11 @@ The output is as follows:
 
 The output is as follows:
 
-<div>
 
 
 ![](./images/C13958_01_04.jpg)
 
 
-</div>
 
 
 
@@ -278,13 +258,11 @@ diamonds_low_df.head()
 
 The output is as follows:
 
-<div>
 
 
 ![](./images/C13958_01_05.jpg)
 
 
-</div>
 
 
 
@@ -325,7 +303,7 @@ the following steps:
 2.  Specify the URL of the dataset:
     ```
     #URL of the dataset 
-    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/datasets/diamonds.csv"
+    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab10-SeaBorn/datasets/diamonds.csv"
     ```
 
 
@@ -385,13 +363,11 @@ The output is as follows:
 
 The output is as follows:
 
-<div>
 
 
 ![](./images/C13958_01_07.jpg)
 
 
-</div>
 
 
 
@@ -433,7 +409,7 @@ function.Let\'s go through the following steps:
 2.  Specify the URL of the dataset:
     ```
     #URL of the dataset 
-    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab19-SeaBorn/datasets/diamonds.csv"
+    diamonds_url = "https://raw.githubusercontent.com/fenago/datascience-ml-next-level/master/Lab10-SeaBorn/datasets/diamonds.csv"
     ```
 
 
@@ -985,13 +961,11 @@ The output is as follows:
 
 The output is as follows:
 
-<div>
 
 
 ![](./images/C13958_01_19.jpg)
 
 
-</div>
 
 
 
@@ -1234,13 +1208,11 @@ to look at the variation in each color:
 
 The output is as follows:
 
-<div>
 
 
 ![](./images/C13958_01_25.jpg)
 
 
-</div>
 
 
 
@@ -1353,13 +1325,11 @@ The output is as follows:
 
 The output is as follows:
 
-<div>
 
 
 ![](./images/C13958_01_29.jpg)
 
 
-</div>
 
 
 
@@ -1516,97 +1486,81 @@ The expected output should be:
 
 After Step 1:
 
-<div>
 
 
 ![](./images/C13958_01_32.jpg)
 
 
-</div>
 
 
 
 After Step 2:
 
-<div>
 
 
 ![](./images/C13958_01_33.jpg)
 
 
-</div>
 
 
 
 After Step 3:
 
-<div>
 
 
 ![](./images/C13958_01_34.jpg)
 
 
-</div>
 
 
 
 After Step 4:
 
-<div>
 
 
 ![](./images/C13958_01_35.jpg)
 
 
-</div>
 
 
 
 After Step 5:
 
-<div>
 
 
 ![](./images/C13958_01_36.jpg)
 
 
-</div>
 
 
 
 After Step 6:
 
-<div>
 
 
 ![](./images/C13958_01_37.jpg)
 
 
-</div>
 
 
 
 After Step 7:
 
-<div>
 
 
 ![](./images/C13958_01_38.jpg)
 
 
-</div>
 
 
 
 After Step 8:
 
-<div>
 
 
 ![](./images/C13958_01_39.jpg)
 
 
-</div>
 
 
 
