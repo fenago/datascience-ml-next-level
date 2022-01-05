@@ -5,32 +5,14 @@ Introducing pandas
 ### This lab covers:
 
 - The introduction of the pandas library for data analysis
-- The advantages and disadvantages of pandas relative to its competitors
 - The differences between working in Excel vs. a programming language
 - The basics of the DataFrame and the Series, the two primary objects in pandas
 - A tour of the library's features through a working example
 
-Introducing pandas
-------------------------
-
-
-What makes `pandas` special is the balance it strikes between processing
-power and user productivity. By relying on lower-level languages for
-many of its calculations, it can efficiently perform operations on data
-sets with millions of rows in mere seconds. At the same time, it
-maintains a simple, terse, and intuitive set of commands. It is easy to
-accomplish a lot with a little code in `pandas`. The library works
-seamlessly with numbers, text, dates and times, missing data, disparate
-data, and more. We\'ll explore its incredible versatility as we proceed
-through the datasets packaged with this course.
-
-
 
 ##### Sample pandas DataFrame, a 2-dimensional table of data
 
-![](../images/01_01.png){width="504" height="235"}
-
-
+![](../images/01_01.png)
 
 
 Importing a Dataset
@@ -42,15 +24,11 @@ each row of data with a line break and each row value with a comma. The
 first row in the file holds the column headers for the data. For
 example, the first three rows in `movies.csv` are:
 
-
-
 ```
 Rank,Title,Studio,Gross,Year
 1,Avengers: Endgame,Buena Vista,"$2,796.30",2019
 2,Avatar,Fox,"$2,789.70",2009
 ```
-
-
 
 
 The first movie has a **Rank** of 1, a **Title** of
@@ -116,25 +94,6 @@ Out [2]
  
 782 rows × 5 columns
 ```
-
-
-
-
-`Pandas` imports the CSV file\'s contents into an object called a
-`DataFrame`, a two-dimensional grid. To avoid cluttering up the screen,
-`pandas` truncates the `DataFrame` to show only the first 5 and the last
-5 rows of data, with a row of ellipses in between. Excel users should
-feel at home here; a `DataFrame` is comparable to a multi-column table
-in the spreadsheet software.
-
-
-This movies `DataFrame` consists of five columns and an index. The
-**index** is the sequence of labels that appears on the leftmost side of
-the `DataFrame`. Index labels serve as identifiers for rows of data.
-When the user does not explicitly state which column from a dataset
-should serve as the index, `pandas` generates an ascending numeric index
-starting at 0.
-
 
 
 Let\'s swap the default numeric index with the values in the **Title**
@@ -291,17 +250,6 @@ Out [11] Rank           500
 ```
 
 
-
-
-`Pandas` returns a new object here called a `Series`. A `Series` stores
-a single column of values. Like a `DataFrame`, a `Series` contains an
-index. Notice that the index labels for the `Series` (**Rank**,
-**Studio**, **Gross**, and **Year**) are the column names from the
-original `movies` `DataFrame`. The *values* for each of the four index
-labels are pulled from the corresponding row of data in `movies`.
-
-
-
 An index label can be used to access a `DataFrame` row. Let's find out
 the information for the classic 1994 tearjerker Forrest Gump.
 
@@ -408,12 +356,6 @@ Title_________________________________________________
 
 
 
-Each of these methods returns a *new* `DataFrame` object. The shape of
-the original `DataFrame` is not modified. The non-mutational nature of
-these methods encourages active experimentation; we can confirm an
-operation is correct before we make it permanent. We\'ll explore ways to
-permanently modify a `DataFrame` later in the course.
-
 
 
 Counting Values in a Series
@@ -424,7 +366,6 @@ We can extract a single column of data from a `DataFrame` as a `Series`.
 Once again, the data is truncated to show a limited number of rows.
 Notice that the index of the original `DataFrame`, the movie titles, has
 been preserved in the `Series`.
-
 
 
 ```
@@ -480,14 +421,6 @@ labels and their counts as the `Series` values.
 
 Filtering a Column by One or More Criteria
 ------------------------------------------------
-
-
-
-A common operation in data analysis is extracting a subset of rows from
-an original dataset based on one or more criteria. Microsoft Excel
-offers the **Filter** tool for this exact purpose.
-
-
 
 Let's say we wanted to limit our `movies` dataset to only the films
 released by the studio **Universal**. We can accomplish this in `pandas`
@@ -846,19 +779,14 @@ higher than the average gross of Warner Brother\'s movies.
 
 
 Summary
--------------
-
+-------
 
 - `Pandas` is a data analysis library built on top of the
     Python programming language.
 - `Pandas` excels at performing complex operations on large data sets
     with a terse syntax.
-- `Competitors` to `Pandas` include the statistical programming
-    language R and the proprietary software suite SAS.
 - `Pandas` can import a variety of different file formats including
     CSV, XLSX, SQL, and more.
-- Any row in a dataset can be accessed by its row number or a label
-    identifier.
 - Datasets can be sorted by the values in one or more columns.
 - One or more conditions can be used to extract a subset of data from
     a larger dataset.

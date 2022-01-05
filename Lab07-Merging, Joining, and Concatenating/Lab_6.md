@@ -4,18 +4,14 @@ Merging, joining and concatenating
 
 ### This lab covers:
 
-- Concatenating [DataFrames] [together on either the vertical
-    or horizontal axis]{.pcalibre29}
-- Merging [DataFrames] together with inner joins, outer joins,
-    and left joins
-- Finding unique and shared values between [DataFrames]
-- Joining [DataFrames] by column values and index values
+- Concatenating `DataFrames`
+- Merging `DataFrames` together with inner joins, outer joins and left joins
+- Finding unique and shared values between `DataFrames`
+- Joining `DataFrames` by column values and index values
 
 
 Introducing the Datasets
 ------------------------------
-
-
 
 Let\'s begin by importing the `Pandas` library and assigning it
 the alias [pd].
@@ -26,24 +22,12 @@ the alias [pd].
 In  [1] import pandas as pd
 ```
 
-
-
-
-This lab\'s datasets come from the online social service Meetup.
-Founded in 2002, meetup.com is a website in which users join groups
-based on common interests like hiking, literature, or board games. Group
-organizers schedule online or in-person events that group members can
-attend. There are many data models within Meetup\'s domain: users,
-groups, events, categories, cities, and more.
-
-
-
 The CSV files for this lab are stored within a single [meetup]
-directory. Let\'s begin with the [members1.csv] and
-[member2.csv] files. These are listings of registered users on the
+directory. Let\'s begin with the `members1.csv` and
+`member2.csv` files. These are listings of registered users on the
 website. Each row include a user\'s unique **member\_id**, full name,
 and location (city and state). Here\'s a preview of the first five rows
-of [members1.csv].
+of `members1.csv`.
 
 
 
@@ -86,7 +70,7 @@ Out [3]
 
 
 
-Let\'s import the two [DataFrames] and assign them to numbered
+Let\'s import the two `DataFrames` and assign them to numbered
 [members] variables. We\'ll come back to these shortly.
 
 
@@ -104,7 +88,7 @@ a unique identifier (**group\_id**) and a name. Each group also belongs
 to a category, a city, and an organizer; these three columns consist of
 foreign keys connecting to other datasets. The **organizer\_id** column
 corresponds to the **member\_id** column in the [members]
-[DataFrames] we just imported. The organizer is a user who
+`DataFrames` we just imported. The organizer is a user who
 schedules and manages events for a group.
 
 
@@ -245,41 +229,19 @@ datasets together.
 Concatenating the Datasets
 --------------------------------
 
-
-
-To *join* two datasets means to link them or connect them together. The
-\"right\" type of join depends on the business problem we\'ll trying to
-solve.
-
-
-
-For example, the [members1] and [members2]
-[DataFrames] both store the same four columns. We first have to
-determine what each dataset represents. Are they simply two halves of a
-greater whole? Or are the two collections of data *distinct* and
-*separate* from each other? Maybe [members1] is a listing of users
-who signed up for Meetup in the previous month and [members2] is a
-listing of users who signed up in the previous year. A business question
-like \"How many total users does Meetup have?\" requires a different
-join than \"What users signed up before the previous month\"?
-
-
-
 For this section, let\'s assume the [members1] and
-[members2] [DataFrames] represent the same fundamental
+[members2] `DataFrames` represent the same fundamental
 collection of users. Something funny happened during their export, and
 the data was split up across two files. We\'d like to combine their rows
 into a single `DataFrame`. **Concatenation** refers to the
 appending of one [DataFrame\'s] rows to the end of another
 `DataFrame`.
 
-
-
 The shared column names between the two [members] datasets make
 concatenation simple. Invoke the [concat] function at the
 top-level of the `Pandas` library. Pass the function\'s
 [objs] parameter a list of `DataFrame` objects. The
-[DataFrames] will be concatenated in the order they are stored
+`DataFrames` will be concatenated in the order they are stored
 within the [objs] list. In the next example, the concatenated
 `DataFrame` adds the rows from [members2] to the end of the
 rows from [members1].
@@ -308,7 +270,7 @@ Out [15]
 
 
 
-Let\'s output the lengths of the [DataFrames] to check our work.
+Let\'s output the lengths of the `DataFrames` to check our work.
 Notice that the length of the concatenated `DataFrame` is equal to
 the sum of the lengths of the two [members DataFrames].
 
@@ -334,7 +296,7 @@ Out [18] 1087923
 If there are over one million rows in the concatenated
 `DataFrame`, why is the final index position above 587,922?
 `Pandas` preserves the original index labels from the
-[members] [DataFrames] in the concatenated
+[members] `DataFrames` in the concatenated
 `DataFrame`. Remember, an index is permitted to have duplicate
 values so `Pandas` does not care about the same number being
 repeated more than once. We can pass the [ignore\_index] parameter
@@ -361,17 +323,6 @@ Out [19]
 1087921  240849026         HU Yang       New York    NY
 1087922  240852081     James Weitz       New York    NY
 ```
-
-
-
-
-What if we\'d like to preserve *which* `DataFrame` each row of
-data came from? One solution is to pass the [concat] function a
-[keys] parameter set to list of strings. The length of the
-[keys] list must be equal to the length of the [objs] list.
-Each key will be associated with the `DataFrame` at the same index
-position in the [objs] list.
-
 
 
 In the next example, the [members1] `DataFrame` is assigned
@@ -403,16 +354,11 @@ B 587918  240845614             Priya       New York    NY
 1087923 rows × 4 columns
 ```
 
-
-
-
 Missing values can arise when column names differ between
-[DataFrames]. Consider the [df1] and [df2]
-[DataFrames] below. The [df1] `DataFrame` has a unique
+`DataFrames`. Consider the [df1] and [df2]
+`DataFrames` below. The [df1] `DataFrame` has a unique
 **A** column and the [df2] `DataFrame` has a unique **C**
 column. Both have a **B** column.
-
-
 
 ```
 In  [21] df1 = pd.DataFrame(data = [
@@ -469,7 +415,7 @@ Out [23]
 
 
 
-We can also concatenate two [DataFrames] together across the
+We can also concatenate two `DataFrames` together across the
 vertical axis. The columns will be glued together instead of the rows.
 The next example concatenates the [df1] and [df2 DataFrames]
 on the column axis. The arguments of 1 and [\"columns\"] are
@@ -488,16 +434,6 @@ Out [24]
 0  1  2  5  6
 1  3  4  7  8
 ```
-
-
-
-
-The result has multiple **B** columns. One comes from [df1], the
-other from [df2]. Both [DataFrames] have identical index
-positions (0 and 1), so `Pandas` is able to join the rows without
-missing values.
-
-
 
 If one `DataFrame` had index positions that the other one does
 not, similar [NaN] values would appear in the concatenation.
@@ -567,7 +503,7 @@ Out [27]
 Let\'s pass the [axis] parameter an argument of
 [\"columns\".] Now, `Pandas` will glue columns **E** and
 **F** from [df3] to the right side of columns **A** and **B** from
-[df1]. Both [DataFrames] have a row with index position of
+[df1]. Both `DataFrames` have a row with index position of
 1. That row will be the only one without missing values.
 
 
@@ -589,40 +525,9 @@ Out [28]
 Inner Joins
 -----------------
 
-
-
-The following sections cover different types of joins in `Pandas`.
-Each join applies a different logical criteria for extraction. A join
-can extract rows from two [DataFrames] by values that are
-exclusive to one or shared between both.
-
-
-
-An **inner join** targets shared elements across two datasets. Consider
-a Venn diagram where each circle represents a `DataFrame`. An
-**inner join** targets the values that only exist in *both*
-[DataFrames]. Values that exist in the first `DataFrame` but
-*do not* exist in the second `DataFrame` are *excluded*.
-Similarly, values that exist in the second `DataFrame` but *do
-not* exist in the first `DataFrame` are also excluded. We\'re
-targeting the colored overlap in the middle.
-
-
-
-![](../images/10_01.png){width="336" height="232"}
-
-
-
-In the previous section, we viewed the two [members] datasets as
-two parts of a greater whole. The complete collection of data was
-coincidentally stored across two separate [DataFrames], and we
-wanted to combine them into one.
-
-
-
 Let\'s now turn our focus to the [events1] and [events2]
 datasets. Let\'s assume the two are *distinct* from each other. For
-example, let\'s say the two [DataFrames] reflect meetups across
+example, let\'s say the two `DataFrames` reflect meetups across
 two separate months. There is a *reason* why the two have been kept
 separate. Here\'s a quick reminder of what both datasets look like.
 
@@ -653,7 +558,7 @@ Out [30]
 
 There are certain groups that held events across both months. Let\'s
 identify them. We have to target the rows from the two
-[DataFrames] that have an equal value in their **group\_id**
+`DataFrames` that have an equal value in their **group\_id**
 columns.
 
 
@@ -673,7 +578,7 @@ diagram. The \"right\" `DataFrame` is the circle on the right, the
 second dataset. The [how] parameter expects a string that declares
 the type of join; we\'ll pass in [\"inner\"]. `Pandas` also
 needs to know the columns that should be used to identify matches.
-We\'re lucky in this case because *both* [DataFrames] have a
+We\'re lucky in this case because *both* `DataFrames` have a
 **group\_id** column. Let\'s pass the column name as a string to the
 [on] parameter.
 
@@ -696,21 +601,10 @@ Out [31]
 ```
 
 
-
-
-The merged `DataFrame` include all columns from the
-[events1] and [events2] [DataFrames]. By default, the
-columns from [events1] are suffixed with [\"\_x\"] and the
-columns from [events2] are suffixed with [\"\_y\"]. The
-**group\_id** column is listed once with no suffix. It name is shared
-across both datasets.
-
-
-
 Let\'s explore the inner join in greater depth to make sure we
 understand what just happened. The first 4 rows of the merged
 `DataFrame` have a **group\_id** of 5817262. We can filter for
-that id in the [events1] and [events2] [DataFrames].
+that id in the [events1] and [events2] `DataFrames`.
 
 
 
@@ -737,7 +631,7 @@ Out [33]
 
 
 The merged `DataFrame` creates one row for each **group\_id**
-match across the two [events] [DataFrames]. There are 4 rows
+match across the two [events] `DataFrames`. There are 4 rows
 in [events1] and 1 row in [events2] with a **group\_id** of
 5817262. Each of the 4 rows in [events1] is paired with the single
 row in [events2]. Thus, a total of 4 rows (4 x 1) are store in the
@@ -810,26 +704,14 @@ recurring events for storytelling fans.
 
 
 Outer Joins
------------------
-
-
-
-An **outer join** combines *all* elements across two datasets. A
-record\'s exclusivity to either the left or right `DataFrame` does
-not matter. An outer join inherently includes the results of an inner
-join.
-
-
-
-![](../images/10_02.png){width="367" height="250"}
-
+-----------
 
 
 Let\'s merge [events1] and [events2] with an outer join. All
 group ids from both datasets will be present in the resulting
 `DataFrame`. If there is a **group\_id** match between
 [events1] and [events2], `Pandas` will merge the
-columns from the [DataFrames] together in a single row.
+columns from the `DataFrames` together in a single row.
 `Pandas` will substitute missing values if a group\_id exists in
 one [events] `DataFrame` but not the other.
 
@@ -849,14 +731,6 @@ Out [36]
 3  230034070  Dinner, Comedy...   5817262  qrwlqhytcbcc  Drinks with In...
 4  184167702  Friday Night D...   1627081  kjmpllytpbfb  Murder Mystery...
 ```
-
-
-
-
-Hopefully this results set is familiar. We saw the same rows in the
-inner join in the previous section. But this preview doesn\'t tell the
-full story of the merge.
-
 
 
 Let\'s take a look at the *last* five rows of the merged
@@ -883,17 +757,7 @@ Out [37]
 
 
 
-The previous output reveals that **group\_id** 18278889 is *not found*
-in the [events1] `DataFrame`. However, 18278889 does exist
-within [events2]. In fact, it\'s listed for multiple events. An
-outer join combines *all* groups from [events1] and
-[events2]. Thus, when it\'s unable to find a group match,
-`Pandas` substitutes [NaN] values for the columns from
-[events1].
-
-
-
-The logic applies in reverse as well. There are group ids that are
+There are group ids that are
 present in [events1] that do not exist in [events2]. The
 [events1] rows for these groups are still present in the merged
 `DataFrame`. The values for the **event\_id** and **event\_name**
@@ -955,7 +819,7 @@ Out [39]
 
 
 We can use the **\_merge** column to filter rows based on inclusion in
-either of the [events] [DataFrames]. The next example
+either of the [events] `DataFrames`. The next example
 extracts rows with a value of [\"left\_only\"] in the **\_merge**
 column or, equivalently, the rows whose **group\_id** is only present in
 [events1], the left `DataFrame`.
@@ -986,25 +850,10 @@ Out [40]
 
 
 Left and Right Joins
---------------------------
+--------------------
 
 
-
-A **left join** pulls in values from a second dataset based on foreign
-keys in an original dataset. This is equivalent to a VLOOKUP operation
-in Excel. A left join is optimal when one of the datasets is the focal
-point of the analysis. The right dataset is pulled in to provide
-supplemental information related to the primary records in the left
-dataset.
-
-
-
-![](../images/10_03.png){width="419" height="315"}
-
-
-
-The [groups] dataset is ideal for a left join. Here\'s a quick
-reminder of what it looks like.
+The [groups] dataset is ideal for a left join. Here\'s a quick reminder of what it looks like.
 
 
 
@@ -1018,26 +867,13 @@ Out [41]
 ```
 
 
-
-
-The foreign key values in the **category\_id**, **city\_id,** and
-**organizer\_id** columns reference ids in *other* datasets
-([categories], [cities], and [members] respectively).
-This is a pretty ingenious design. Consider a scenario in which multiple
-groups are connected to the same city id. It would be wasteful for each
-group row to store duplicate information about its city\'s name, state,
-zip code, etc. Instead, we can store the city data in a separate table
-and merge it with the [groups] table when needed.
-
-
-
 Let\'s try a left join. The **category\_id** column in [groups]
 references ID values in the [categories] `DataFrame`. Once
 again, let\'s invoke the [merge] method. We\'ll pass the
 [how] parameter a string of [\"left\"] and the [on]
 parameter a string of [\"category\_id\".] We can only use the
 [on] parameter because **category\_id** is the column name in both
-the [groups] and [categories] [DataFrames].
+the [groups] and [categories] `DataFrames`.
 
 
 
@@ -1113,7 +949,7 @@ column of foreign keys that associates with the values in the
 
 We can pass the [left\_on] and [right\_on] parameters to the
 [merge] method different strings to indicate the column names in
-the respective [DataFrames]. Below, we do a left join to merge
+the respective `DataFrames`. Below, we do a left join to merge
 city information into the [groups] `DataFrame`. A few
 columns are removed from the output to fit onto the page.
 
@@ -1138,7 +974,7 @@ Out [45]
 
 
 Unlike the on parameter, the [left\_on] and [right\_on]
-parameters will keep both columns from the two [DataFrames]. We
+parameters will keep both columns from the two `DataFrames`. We
 can see the presence of **city\_id** and **city\_identifier** in the
 output above.
 
@@ -1180,7 +1016,7 @@ member_id_________________________________
 
 
 
-Let\'s merge the [groups] and [members1] [DataFrames].
+Let\'s merge the [groups] and [members1] `DataFrames`.
 Here\'s a quick reminder of what the [groups] `DataFrame`
 looks like. The **organizer\_id** column is a collection of foreign keys
 that connect to **member\_id** values in the [members1] index. A
@@ -1239,13 +1075,6 @@ one that the [merge] method is invoked upon.
 Coding Challenge
 ----------------------
 
-
-
-We\'re almost at the end of our exploration; thanks for joining us!
-Let\'s practice the concepts introduced in the previous sections.
-
-
-
 The datasets for this coding challenge are located within the
 [restaurant] folder. This is a collection of tables related to
 operations in a fictional dining establishment. The
@@ -1276,7 +1105,7 @@ In  [51] week1 = pd.read_csv("restaurant/week_1_sales.csv")
 
 
 
-The **Customer ID** column in the two [week] [DataFrames]
+The **Customer ID** column in the two [week] `DataFrames`
 holds foreign keys pointing to the ID column in [customers.csv].
 The customers dataset includes each customer\'s first name, last name,
 gender, company and occupation. We\'ll import that dataset with the
@@ -1306,7 +1135,7 @@ In  [53] customers = pd.read_csv("restaurant/customers.csv",
 
 
 There\'s another foreign key column in the [weeks]
-[DataFrames]. The **Food ID** values connect to the **ID** column
+`DataFrames`. The **Food ID** values connect to the **ID** column
 within [foods.csv]. The foods dataset connects an id to a food
 item and its price. When we import the dataset, let\'s again set the
 **ID** column as the index.
@@ -1340,7 +1169,7 @@ In  [55] foods = pd.read_csv("restaurant/foods.csv", index_col = "Food ID")
 Here are the challenges:
 
 
-1.  [[]{.pcalibre42} Concatenate the two weeks of sales data into one
+1.  Concatenate the two weeks of sales data into one
     `DataFrame`. Assign the [week1] `DataFrame` a key
     of [\"Week 1\"] and the [week2] `DataFrame` a key
     of [\"Week 2\"].
@@ -1358,7 +1187,7 @@ Here are the challenges:
 Challenge \#1 asks to combine the two weeks of restaurant sales data
 into a single `DataFrame`. The [concat] function at the
 top-level of the `Pandas` library offers a perfect solution. We
-can pass in the two [DataFrames] inside a list to the [objs]
+can pass in the two `DataFrames` inside a list to the [objs]
 parameter. To assign each `DataFrame` its own key in a MultiIndex,
 we\'ll also provide the [keys] parameter a list with the level
 labels.
@@ -1389,7 +1218,7 @@ Week 2 245          783       10
 
 Challenge \#2 asks for the customers who visited the restaurant in both
 weeks. From a technical perspective, we need to identify the Customer
-IDs that are present in *both* the week1 and week2 [DataFrames].
+IDs that are present in *both* the week1 and week2 `DataFrames`.
 An inner join is what we\'re looking for here. Let\'s invoke the
 [merge] method on [week1] and pass in [week2] as the
 right `DataFrame`. We\'ll declare the join type to be
@@ -1417,7 +1246,7 @@ Out [57]
 
 
 Remember, the inner merge shows all matches of customer IDs across the
-two week [DataFrames]. If we wanted a list of just the customers
+two week `DataFrames`. If we wanted a list of just the customers
 themselves, we could target the unique values in **Customer ID** column
 above.
 
@@ -1426,7 +1255,7 @@ above.
 Challenge \#3 requests the customers who visited the restaurant in both
 weeks and ordered the same item. Once again, an inner join is the right
 choice for finding values present in both the left and right
-[DataFrames]. This time around, however, we have to pass the
+`DataFrames`. This time around, however, we have to pass the
 [on] parameter a list with two columns. The values in both the
 **Customer ID** and **Food ID** columns must match between [week1]
 and [week2].
@@ -1458,7 +1287,7 @@ Out [58]
 Challenge \#4 wants to differentiate between the customers who came in
 both weeks versus the ones who only came in one week. One solution is to
 use an outer join and match all records across the two
-[DataFrames] by the values in the **Customer ID** column. We can
+`DataFrames` by the values in the **Customer ID** column. We can
 pass the [indicator] parameter a value of True to add a
 **\_merge** column. The column will indicate whether the **Customer ID**
 exists in only the left table [(\"left\_only]\"), only the right
@@ -1530,12 +1359,12 @@ Summary
 
 - A **foreign key** is a value in a dataset that references an
     identifier in another dataset.
-- A **join** merges two [DataFrames] together based on some
+- A **join** merges two `DataFrames` together based on some
     logical criteria. Different situations call for different
     joins.
 - An **inner join** finds values in common between two
-    [DataFrames].
-- An **outer join** combines two [DataFrames] based on values
+    `DataFrames`.
+- An **outer join** combines two `DataFrames` based on values
     in a column, regardless of whether they are exclusive or
     shared.
 - A **left join** pulls in information from one `DataFrame`

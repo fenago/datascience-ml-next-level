@@ -9,8 +9,7 @@ Filtering a DataFrame
     one or more conditions
 - Filtering for rows that include or exclude null values
 - Selecting values that fall between a range
-- Removing duplicate and null values from a
-    `DataFrame`
+- Removing duplicate and null values from a `DataFrame`
 
 
 
@@ -53,15 +52,6 @@ Out [2]
 999      Albert    Male    5/15/12  129949.0   True         Sales
 1000        NaN     NaN        NaN       NaN    NaN           NaN
 ```
-
-
-
-
-It turns out the dataset is quite messy. We have missing values in every
-column. In fact, our last row consists of *only* `NaN` values. Data in
-the real world is subject to a lot of variation depending on the system
-it is exported from. Blank lines are a common occurrence.
-
 
 
 Is there a way that we can increase the utility of our dataset? Our
@@ -129,19 +119,6 @@ memory usage: 47.0+ KB
 
 
 
-
-The `RangeIndex` at the top of the output tells us there are 1001 rows
-in the dataset. We can identify the number of present (non-null) values
-in each column from the output. All six columns have missing data.
-
-
-First up, `Pandas` has imported our **Mgmt** column as a sequence of
-text values even though it is fundamentally a collection of Booleans.
-Notice that the designation of the column\'s values is `object` in the
-output from the `info` method. `object` is the library\'s internal lingo
-for strings.
-
-
 The `astype` method converts the values of a `Pandas` object to a
 different data type. Let\'s extract the **Mgmt** `Series` object from
 our `DataFrame`, then invoke its `astype` method. The argument to the
@@ -167,22 +144,6 @@ Out [6] 0        True
         1000     True
         Name: Mgmt, Length: 1001, dtype: bool
 ```
-
-
-
-
-Looks good! It\'s now time to replace our existing **Mgmt** column.
-
-
-
-Overwriting an existing column or creating a new one in a `DataFrame`
-works similarly to adding a key-value pair to a dictionary. If a column
-with the specified name exists, `Pandas` will overwrite it with the new
-`Series`. If the column does not exist, `Pandas` will append the new
-`Series` to the right of the `DataFrame`, matching by common index
-labels across the two data structures.
-
-
 
 Let\'s overwrite our **Mgmt** column with our new `Series` of Booleans.
 As a reminder, the right side of the assignment operator ( = ) is always
@@ -232,12 +193,7 @@ memory usage: 40.2+ KB
 ```
 
 
-
-
-Ah-ha! We\'ve reduced the memory usage by almost 15%. That\'s a pretty
-good start!
-
-
+We\'ve reduced the memory usage by almost 15%. That\'s a pretty good start!
 
 Next, let\'s take a look at the **Salary** column. If we open the raw
 CSV file, we\'ll see that the column\'s values are actually stored as
@@ -310,24 +266,6 @@ Out [12] 0         0
 In  [13] employees["Salary"] = employees["Salary"].fillna(0).astype(int)
 ```
 
-
-
-
-OK, so we\'ve converted our **Start Date** and **Mgmt** columns to store
-more appropriate data types than strings. Is there anything left to
-optimize? Absolutely!
-
-
-
-`Pandas` includes a special data type called a category, which is ideal
-when a column includes a small number of *unique* values relative to its
-total size. Common examples of data points with a limited number of
-values include gender, weekdays, blood types, planets, income groups,
-and more. Behind the scenes, categorical values are stored as plain
-Python objects instead of NumPy `ndarrays` and are optimized for speed.
-
-
-
 The `nunique` method can tell us the number of unique values in each
 column of a `DataFrame`. Note that missing values (`NaN`) will be
 excluded by default; you can add a `dropna = False` argument to the
@@ -346,14 +284,6 @@ Out [14] First Name    200
          Team           10
          dtype: int64
 ```
-
-
-
-
-Two columns stand out as good candidates for categorical values:
-**Gender** and **Team**. In 1001 rows of data, they only have 2 and 10
-unique values respectively.
-
 
 
 Let\'s practice the `astype` syntax again. First, we\'ll test that a
@@ -1962,21 +1892,12 @@ Out [80]
 
 
 Summary
--------------
+-------
 
-
-- The `astype` method converts the values in a
-    `Series` to another data type.
-- The categorical data type is ideal when a column has a small number
-    of unique values.
-- Subsets of data can be extracted from a `DataFrame` based on one or
-    more conditions.
-- The `&` and `|` symbols are used for \"AND\" and \"OR\"
-    logic.
+- The `astype` method converts the values in a `Series` to another data type.
+- Subsets of data can be extracted from a `DataFrame` based on one or more conditions.
+- The `&` and `|` symbols are used for \"AND\" and \"OR\" logic.
 - Helper methods like `isnull`, `notnull`, `between`, and
-    `duplicated` generate Boolean `Series` to assist with filtering
-    datasets.
-- Null values in a `Series` can be replaced with the `fillna`
-    method.
-- Rows with null values can be removed with the `dropna`
-    method.
+    `duplicated` generate Boolean `Series` to assist with filtering datasets.
+- Null values in a `Series` can be replaced with the `fillna` method.
+

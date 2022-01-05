@@ -4,34 +4,17 @@ The DataFrame object
 
 ### This lab covers:
 
-- Instantiating a `DataFrame` object from a dictionary and
-    a numpy `ndarray`
-- Importing a multidimensional dataset with the `read_csv`
-    method
+- Instantiating a `DataFrame` object from a dictionary and a numpy `ndarray`
+- Importing a multidimensional dataset with the `read_csv` method
 - Sorting one or more columns in a `DataFrame`
 - Accessing rows and columns from a `DataFrame`
 - Setting and resetting the index of a `DataFrame`
 - Renaming column and index values
 
 
-Overview of a DataFrame
------------------------------
-
-
-
-The workhorse of the `Pandas` library, the `DataFrame` is a
-2-dimensional data structure consisting of rows and columns. Two points
-of reference are needed to extract any given value from the dataset. A
-`DataFrame` can be described as a grid or a table of data, similar to
-one you\'d find in a spreadsheet application like Excel.
-
-
-
 #### Creating A DataFrame from a Dictionary
 
-
-
-As always, let\'s begin by importing `Pandas`. We\'ll also be using the
+Let\'s begin by importing `Pandas`. We\'ll also be using the
 NumPy library for some random data generation. It is commonly assigned
 the alias `np`.
 
@@ -43,16 +26,7 @@ In  [1] import pandas as pd
 ```
 
 
-
-
-Before we import our first dataset, let\'s practice instantiating a
-`DataFrame` from some native Python objects. One suitable data structure
-is a dictionary; its keys will serve as the column names and the
-corresponding values will serve as that column\'s values.
-
-
-
-The example below uses three equal-sized lists to store cities,
+The following example below uses three equal-sized lists to store cities,
 countries, and populations. You\'re welcome to substitute other iterable
 objects like tuples or `Series` in place of the lists. The `DataFrame`
 class is available as a top-level attribute on the `pandas` library. Its
@@ -78,16 +52,6 @@ Out [2]
 2      Barcelona           Spain      5515000
 3           Rome           Italy      2873000
 ```
-
-
-
-
-We have a `DataFrame`! Much like a `Series`, it also includes an index
-consisting of labels for each row. Once again, `Pandas` generates a
-sequential index starting at 0 because we did not provide an explicit
-one to the constructor. The rows alternate between a gray and white
-background to assist with comprehension.
-
 
 
 What if we wanted the data flipped around, with our column headers
@@ -248,9 +212,7 @@ implementations of them are often different; we\'re dealing with
 multiple columns now! Let\'s import our first dataset to try them out!
 
 
-
 #### Importing a CSV File with the read\_csv Method
-
 
 
 The `nba.csv` file is a list of professional basketball players in the
@@ -387,17 +349,6 @@ In  [15] nba.index
  
 Out [15] RangeIndex(start=0, stop=450, step=1)
 ```
-
-
-
-
-It\'s a `RangeIndex`, an index optimized for storing numeric values that
-are in sequence. Much like Python\'s `range` function, the `RangeIndex`
-includes three parameters: `start` (the inclusive lower bound), `stop`
-(the lower bound), and `step` (the interval or step sequence between
-every two values). The output above tells us that the index starts at 0
-and proceeds to 450 in increments of 1 (i.e. 0, 1, 2 ... 449).
-
 
 
 What about the data itself? We can access the NumPy `ndarray` holding
@@ -766,15 +717,6 @@ Out [37]
 ```
 
 
-
-
-As with a `Series`, the `ascending` parameter to the `sort_values`
-method is assigned a default argument of True. This will sort a column
-of strings in alphabetical order, a column of numbers in increasing
-order, and a column of datetimes in chronological order.
-
-
-
 What if we wanted to find the five youngest players in the NBA? We could
 sort the **Birthday** column in reverse chronological order by passing
 `ascending` an argument of False, then take five rows off the top with
@@ -800,8 +742,6 @@ Out [38]
 
 
 #### Sort by Multiple Columns
-
-
 
 The `by` parameter of the `sort_values` method also accepts a list of
 columns. The `DataFrame`\'s columns will be sorted in the order they are
@@ -830,9 +770,6 @@ Out [39]
 36     Thomas Bryant  Washington Wizards        C 1997-07-31   8000000
 ```
 
-
-
-
 We can pass a single Boolean value to the `ascending` parameter to apply
 the same sort order to each column. Here, we sort the **Team** column in
 descending (i.e. reverse alphabetical) order, then the **Name** column
@@ -858,8 +795,6 @@ Out [40]
 167     Allen Crabbe       Atlanta Hawks       SG 1992-04-09  18500000
 359         Alex Len       Atlanta Hawks        C 1993-06-16   4160000
 ```
-
-
 
 
 What if we wanted a different sorting order for each column? For
@@ -914,16 +849,7 @@ Sort by Index
 -------------------
 
 
-
-Our `DataFrame` is now in a different order than when it arrived!
-Luckily, we can use a familiar method to return it back to its original
-form.
-
-
-
 #### Sort by Row Index
-
-
 
 The `sort_index` method sorts a `DataFrame` by its index values.
 
@@ -980,15 +906,6 @@ In  [45] nba.sort_index(inplace = True)
 
 
 #### Sort by Column Index
-
-
-
-We\'re officially in the realm of 2-dimensional data. That means we now
-have *two* indices by which we can sort. Each of them is considered an
-axis; the row index represents the horizonal axis while the column index
-represents the vertical axis.
-
-
 
 To sort the *columns* in order, pass an argument of either 1 or
 \"columns\" to the `axis` parameter of the `sort_index` method.
@@ -2221,30 +2138,5 @@ Team__________________________________________________
 New York Jets  Ryan Kalil        C 1985-03-29  2400000
 ```
 
-
-
-
 The oldest player on the New York Jets in this dataset is Ryan Kalil.
-His birthday is March 29^th^, 1985.
-
-
-
-Summary
---------------
-
-
-- The `DataFrame` is a two-dimensional data structure
-    consisting of rows and columns.
-- The `DataFrame` shares attributes and methods with the `Series`,
-    some of which operate differently due to the differences between the
-    two objects.
-- The `sort_values` method sorts one or more columns. A different
-    sort order can be applied to each column sort.
-- The `loc` attribute extracts one or more rows from the `DataFrame`
-    by index label. Specific columns can also be pulled out.
-- The `iloc` attribute extracts one or more rows from the `DataFrame`
-    by index position. Specific columns can also be pulled out.
-- The `set_index` method restores an index as a column in the
-    `DataFrame`.
-- The `rename` method sets a different name for one or more columns
-    or rows.
+His birthday is March 29th, 1985.
