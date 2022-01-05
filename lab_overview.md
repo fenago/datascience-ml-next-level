@@ -43,13 +43,3 @@ Labs for this course are available at path shared below. Update lab environment 
 		* http://<update-DNS>/lab/workspaces/lab11_scikit
 12. ##### TensorFlow Overview
 		* http://<update-DNS>/lab/workspaces/lab12_tensorFlow
-13. ##### Getting Started with PySpark
-		* http://<update-DNS>/lab/workspaces/lab13_pyspark
-14. ##### Getting Big Data into the Spark Environment Using RDDs
-		* http://<update-DNS>/lab/workspaces/lab14_rdd
-15. ##### Big Data Cleaning and Wrangling with Spark
-		* http://<update-DNS>/lab/workspaces/lab15_cleaning
-16. ##### Powerful Exploratory Data Analysis with MLlib
-		* http://<update-DNS>/lab/workspaces/lab16_mlib
-17. ##### Putting Structure on Your Big Data with SparkSQL
-		* http://<update-DNS>/lab/workspaces/lab17_sparksql
