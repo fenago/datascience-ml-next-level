@@ -562,7 +562,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![Interpolation](./images/interpolation.jpg)
+![](../images/interpolation.jpg)
 
 1-D Interpolation
 -----------------
@@ -592,7 +592,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![1-D Interpolation](./images/1d_interpolation.jpg)
+![](../images/1d_interpolation.jpg)
 
 
 ### Univariate Spline
@@ -610,7 +610,7 @@ plt.show()
 
 Use the default value for the smoothing parameter.
 
-![Splines](./images/splines.jpg)
+![](../images/splines.jpg)
 
 ```
 spl = UnivariateSpline(x, y)
@@ -621,7 +621,7 @@ plt.show()
 
 Manually change the amount of smoothing.
 
-![Splines Smoothing](./images/splines_smoothing.jpg)
+![](../images/splines_smoothing.jpg)
 
 ```
 spl.set_smoothing_factor(0.5)
@@ -629,7 +629,7 @@ plt.plot(xs, spl(xs), 'b', lw = 3)
 plt.show()
 ```
 
-![Splines Smoothing](./images/splines_smoothing2.jpg)
+![](../images/splines_smoothing2.jpg)
 
 SciPy - Linalg
 ==============
@@ -814,7 +814,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![Image Turning Operation](./images/image_turning_operation.jpg)
+![](../images/image_turning_operation.jpg)
 
 Besides this, we have the **rotate() function**, which rotates the image
 with a specified angle.
@@ -832,7 +832,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![Image Rotation Operation](./images/image_rotation_operation.jpg)
+![](../images/image_rotation_operation.jpg)
 
 
 
@@ -853,7 +853,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![](./images/image_blurring_operation.jpg)
+![](../images/image_blurring_operation.jpg)
 
 The sigma value indicates the level of blur on a scale of five. We can
 see the change on the image quality by tuning the sigma value. For more
@@ -880,7 +880,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![Edge Detection](./images/edge_detection.jpg)
+![](../images/edge_detection.jpg)
 
 Let us consider the following example.
 
@@ -903,7 +903,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![Edge Detection-2](./images/edge_detection_2.jpg)
+![](../images/edge_detection_2.jpg)
 
 
 SciPy - Spatial
@@ -929,7 +929,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![Delaunay Triangulations](./images/delaunay_triangulations.jpg)
+![](../images/delaunay_triangulations.jpg)
 
 Coplanar Points
 ---------------
@@ -973,7 +973,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![Convex Hulls](./images/convex_hulls.jpg)
+![](../images/convex_hulls.jpg)
 
 
 SciPy - Special Package

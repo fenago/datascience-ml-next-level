@@ -15,11 +15,13 @@ This lab will cover the following topics:
 -   Functions
 -   Modules
 
+#### Pre-reqs:
+- Google Chrome (Recommended)
 
+#### Lab Environment
+Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
 
-### Starting the interactive console
-
-
+#### Starting the interactive console
 Run the following command to start Python\'s interactive console:
 
 
