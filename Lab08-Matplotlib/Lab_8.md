@@ -1,7 +1,7 @@
 <img align="right" src="../logo.png">
 
 
-Lab 18 : Visualization Using Matplotlib
+Lab 8 : Visualization Using Matplotlib
 -------------------------------------
 
 

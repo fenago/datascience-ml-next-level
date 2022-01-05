@@ -1,7 +1,7 @@
 <img align="right" src="../logo.png">
 
 
-Lab 19 : Visualization Using SeaBorn
+Lab 10 : Visualization Using SeaBorn
 -------------------------------------
 
 By the end of this lab, you will be able to:
