@@ -1,6 +1,6 @@
 
-Merging, joining and concatenating
-=====================================
+Lab 7: Merging, joining and concatenating
+=========================================
 
 ### This lab covers:
 
