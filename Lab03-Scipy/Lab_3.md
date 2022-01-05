@@ -24,7 +24,7 @@ Let us consider the following example.
 import numpy as np
 list = [1,2,3,4]
 arr = np.array(list)
-print arr
+print (arr)
 ```
 
 The output of the above program will be as follows.
@@ -47,7 +47,7 @@ following example.
 
 ```
 import numpy as np
-print np.zeros((2, 3))
+print (np.zeros((2, 3)))
 ```
 
 The output of the above program will be as follows.
@@ -65,7 +65,7 @@ following example.
 
 ```
 import numpy as np
-print np.ones((2, 3))
+print (np.ones((2, 3)))
 ```
 
 The output of the above program will be as follows.
@@ -82,7 +82,7 @@ values. Let us consider the following example.
 
 ```
 import numpy as np
-print np.arange(7)
+print (np.arange(7))
 ```
 
 The above program will generate the following output.
@@ -98,8 +98,8 @@ Let us consider the following example.
 ```
 import numpy as np
 arr = np.arange(2, 10, dtype = np.float)
-print arr
-print "Array Data Type :",arr.dtype
+print (arr)
+print ("Array Data Type :" , arr.dtype)
 ```
 
 The above program will generate the following output.
@@ -117,7 +117,7 @@ and end values. Let us consider the following example.
 
 ```
 import numpy as np
-print np.linspace(1., 4., 6)
+print (np.linspace(1., 4., 6))
 ```
 
 The above program will generate the following output.
@@ -136,7 +136,7 @@ example.
 
 ```
 import numpy as np
-print np.matrix('1 2; 3 4')
+print (np.matrix('1 2; 3 4'))
 ```
 
 The above program will generate the following output.
@@ -154,7 +154,7 @@ us consider the following example.
 ```
 import numpy as np
 mat = np.matrix('1 2; 3 4')
-print mat.H
+print (mat.H)
 ```
 
 The above program will generate the following output.
@@ -199,7 +199,7 @@ We will understand how to implement K-Means in SciPy.
 We will see the implementation and usage of each imported function.
 
 ```
-from SciPy.cluster.vq import kmeans,vq,whiten
+from scipy.cluster.vq import kmeans,vq,whiten
 ```
 
 ### Data generation
@@ -212,6 +212,8 @@ from numpy.random import rand
 
 # data generation with three features
 data = vstack((rand(100,3) + array([.5,.5,.5]),rand(100,3)))
+
+data
 ```
 
 Now, we have to check for data. The above program will generate the
@@ -229,6 +231,7 @@ We have to use the following code to whiten the data.
 ```
 # whitening of data
 data = whiten(data)
+print(data)
 ```
 
 Compute K-Means with Three Clusters
@@ -275,7 +278,7 @@ cluster of each observation using the following code.
 
 ```
 # check clusters of observation
-print clx
+print(clx)
 ```
 
 The above code will generate the following output.
@@ -303,8 +306,8 @@ To start with, let us compare the 'pi' value by considering the following exampl
 from scipy.constants import pi
 from math import pi
 
-print("sciPy - pi = %.16f"%scipy.constants.pi)
-print("math - pi = %.16f"%math.pi)
+print("sciPy - pi = " + str(scipy.constants.pi))
+print("math -  pi = " + str(pi))
 ```
 
 The above program will generate the following output.
@@ -320,7 +323,7 @@ us consider the following example.
 ```
 import scipy.constants
 res = scipy.constants.physical_constants["alpha particle mass"]
-print res
+print(res)
 ```
 
 The above program will generate the following output.
@@ -349,14 +352,15 @@ consider the following example
 
 ```
 #Importing the fft and inverse fft functions from fftpackage
-from scipy.fftpack import fft
+from scipy.fftpack import fft, ifft
+import numpy as np
 
 #create an array with random n numbers
 x = np.array([1.0, 2.0, 1.0, -1.0, 1.5])
 
 #Applying the fft function
 y = fft(x)
-print y
+print(y)
 ```
 
 The above program will generate the following output.
@@ -373,7 +377,7 @@ Let us look at another example
 
 yinv = ifft(y)
 
-print yinv
+print (yinv)
 ```
 
 The above program will generate the following output.
@@ -391,7 +395,7 @@ time_step = 0.02
 period = 5.
 time_vec = np.arange(0, 20, time_step)
 sig = np.sin(2 * np.pi / period * time_vec) + 0.5 *np.random.randn(time_vec.size)
-print sig.size
+print(sig.size)
 ```
 
 We are creating a signal with a time step of 0.02 seconds. The last
@@ -415,7 +419,7 @@ Let us understand this with the help of an example.
 from scipy import fftpack
 sample_freq = fftpack.fftfreq(sig.size, d = time_step)
 sig_fft = fftpack.fft(sig)
-print sig_fft
+print(sig_fft)
 ```
 
 The above program will generate the following output.
@@ -434,7 +438,7 @@ Let us consider the following example.
 
 ```
 from scipy.fftpack import dct
-print dct(np.array([4., 3., 5., 10., 5., 3.]))
+print(dct(np.array([4., 3., 5., 10., 5., 3.])))
 ```
 
 The above program will generate the following output.
@@ -449,8 +453,8 @@ inverse of the dct function. Let us understand this with the following
 example.
 
 ```
-from scipy.fftpack import dct
-print idct(np.array([4., 3., 5., 10., 5., 3.]))
+from scipy.fftpack import idct
+print(idct(np.array([4., 3., 5., 10., 5., 3.])))
 ```
 
 The above program will generate the following output.
@@ -472,7 +476,7 @@ import scipy.integrate
 from numpy import exp
 f= lambda x:exp(-x**2)
 i = scipy.integrate.quad(f, 0, 1)
-print i
+print(i)
 ```
 
 The above program will generate the following output.
@@ -501,7 +505,7 @@ f = lambda x, y : 16*x*y
 g = lambda x : 0
 h = lambda y : sqrt(1-4*y**2)
 i = scipy.integrate.dblquad(f, 0, 0.5, g, h)
-print i
+print(i)
 ```
 
 The above program will generate the following output.
@@ -531,7 +535,7 @@ from scipy import interpolate
 import matplotlib.pyplot as plt
 x = np.linspace(0, 4, 12)
 y = np.cos(x**2/3+4)
-print x,y
+print (x,y)
 ```
 
 The above program will generate the following output.
@@ -552,7 +556,7 @@ of the points in space, let us plot using the following program and see
 how they look like.
 
 ```
-plt.plot(x, y,’o’)
+plt.plot(x, y,'o')
 plt.show()
 ```
 
@@ -567,9 +571,9 @@ By using the above data, let us create a interpolate function and draw a
 new interpolated graph.
 
 ```
-f1 = interp1d(x, y,kind = 'linear')
+f1 = interpolate.interp1d(x, y,kind = 'linear')
 
-f2 = interp1d(x, y, kind = 'cubic')
+f2 = interpolate.interp1d(x, y, kind = 'cubic')
 ```
 
 Now, let us create a new input of more length to see the clear
@@ -579,7 +583,7 @@ data on the new data.
 ```
 xnew = np.linspace(0, 4,30)
 
-plt.plot(x, y, 'o', xnew, f(xnew), '-', xnew, f2(xnew), '--')
+plt.plot(x, y, 'o', xnew, f1(xnew), '-', xnew, f2(xnew), '--')
 
 plt.legend(['data', 'linear', 'cubic','nearest'], loc = 'best')
 
@@ -645,7 +649,7 @@ b = np.array([2, 4, -1])
 x = linalg.solve(a, b)
 
 #printing the result array
-print x
+print(x)
 ```
 
 The above program will generate the following output.
@@ -671,7 +675,7 @@ A = np.array([[1,2],[3,4]])
 x = linalg.det(A)
 
 #printing the result
-print x
+print(x)
 ```
 
 The above program will generate the following output.
@@ -697,10 +701,10 @@ A = np.array([[1,2],[3,4]])
 l, v = linalg.eig(A)
 
 #printing the result for eigen values
-print l
+print(l)
 
 #printing the result for eigen vectors
-print v
+print(v)
 ```
 
 The above program will generate the following output.
@@ -728,7 +732,7 @@ a = np.random.randn(3, 2) + 1.j*np.random.randn(3, 2)
 U, s, Vh = linalg.svd(a)
 
 # printing the result
-print U, Vh, s
+print (U, Vh, s)
 ```
 
 The above program will generate the following output.
@@ -765,6 +769,7 @@ images to learn the image manipulations. Let us consider the following
 example.
 
 ```
+import numpy as np
 from scipy import misc
 f = misc.face()
 
@@ -783,7 +788,7 @@ Let us see the statistical information of the above image.
 ```
 from scipy import misc
 face = misc.face(gray = False)
-print face.mean(), face.max(), face.min()
+print (face.mean(), face.max(), face.min())
 ```
 
 The above program will generate the following output.
@@ -792,25 +797,6 @@ The above program will generate the following output.
 110.16274388631184, 255, 0
 ```
 
-Now, we know that the image is made out of numbers, so any change in the
-value of the number alters the original image. Let us perform some
-geometric transformations on the image. The basic geometric operation is
-cropping
-
-```
-from scipy import misc
-face = misc.face(gray = True)
-lx, ly = face.shape
-# Cropping
-crop_face = face[lx / 4: - lx / 4, ly / 4: - ly / 4]
-import matplotlib.pyplot as plt
-plt.imshow(crop_face)
-plt.show()
-```
-
-The above program will generate the following output.
-
-![](../images/cropping_operation_image_files.jpg)
 
 We can also perform some basic operations such as turning the image
 upside down as described below.
@@ -867,7 +853,7 @@ plt.show()
 
 The above program will generate the following output.
 
-![Image Blurring Operation](./images/image_blurring_operation.jpg)
+![](./images/image_blurring_operation.jpg)
 
 The sigma value indicates the level of blur on a scale of five. We can
 see the change on the image quality by tuning the sigma value. For more
@@ -931,6 +917,8 @@ We can the compute through SciPy. Let us consider the following example.
 
 ```
 from scipy.spatial import Delaunay
+import numpy as np
+
 points = np.array([[0, 4], [2, 1.1], [1, 3], [1, 2]])
 tri = Delaunay(points)
 import matplotlib.pyplot as plt
@@ -950,10 +938,11 @@ Let us see how we can find this using SciPy. Let us consider the
 following example.
 
 ```
+#### Coplanar Points
 from scipy.spatial import Delaunay
 points = np.array([[0, 0], [0, 1], [1, 0], [1, 1], [1, 1]])
 tri = Delaunay(points)
-print tri.coplanar
+print(tri.coplanar)
 ```
 
 The above program will generate the following output.
@@ -976,8 +965,9 @@ points = np.random.rand(10, 2) # 30 random points in 2-D
 hull = ConvexHull(points)
 import matplotlib.pyplot as plt
 plt.plot(points[:,0], points[:,1], 'o')
+
 for simplex in hull.simplices:
-plt.plot(points[simplex,0], points[simplex,1], 'k-')
+    plt.plot(points[simplex,0], points[simplex,1], 'k-')
 plt.show()
 ```
 
@@ -1023,10 +1013,7 @@ The above program will generate the following output.
 
 ### Exponential Function
 
-The syntax of the exponential function is -- scipy.special.exp10(x).
-This will compute 10\*\*x element wise.
-
-Let us consider the following example.
+The syntax of the exponential function is -- scipy.special.exp10(x). Let us consider the following example.
 
 ```
 from scipy.special import exp10
