@@ -619,10 +619,6 @@ Output:
 Hello this is John and my age is 25 !
 ```
 
-The following table shows a list of symbols used along with
-`%`:
-
-![](./images/3.PNG)
 
 ### Triple quotes in Python
 
@@ -808,31 +804,17 @@ times:
 
 ### Indexing, slicing, and matrices
 
-List indices work the same way as string
-indices. Values can be accessed using
-`index`. If you try to read or write an element that does not
-exist, you get `IndexError`. If an index has a negative value,
-it counts backward from the end of the list. 
-
-Now, we will create a list named `cities` and we will see the
-index operations:
+Now, we will create a list named `cities` and we will see the index operations:
 
 `cities = ['Mumbai', 'Bangalore', 'Chennai', 'Pune']`
 
-![](./images/5.PNG)
-
+![](../images/11.PNG)
 
 
 Tuples
-------------------------
+--------
 
-
-
-Python\'s tuple data structure is immutable,
-meaning we cannot change the elements of the tuples. Basically, a tuple
-is a sequence of values that are separated by commas and are enclosed in
-parentheses `( )`. Like lists, tuples are an ordered sequence
-of elements:
+Let's create a tuple:
 
 
 ```
@@ -970,23 +952,12 @@ NameError: name 'cities' is not defined
 
 ### Indexing, slicing, and matrices
 
-Tuple indices work the same way as list
-indices. Values can be accessed using index. If you try to
-read or write an element that does not exist,
-you get `IndexError`. If an index has a
-negative value, it counts backward from the
-end of the list. 
-
-Now, we will create a tuple named `cities` and perform some
-index operations:
+Now, we will create a tuple named `cities` and perform some index operations:
 
 `cities = ('Mumbai', 'Bangalore', 'Chennai', 'Pune')`
 
-![](./images/7.PNG)
 
 ### max() and min()
-
-
 
 Using the `max()` and `min()` functions, we can
 find the highest and lowest values from the
@@ -1130,9 +1101,6 @@ $ python program_name.py img.jpg
 
 Here, `program_name.py` and `img.jpg` are arguments.
 
-Now, we are going to use modules to get the arguments:
-
-![](./images/8.PNG)
 
 ### Sys.argv
 
@@ -1275,24 +1243,6 @@ Loops
 
 ### for loop
 
-`for loop` iterates over each item of the
-sequence or any other iterable object and it
-will execute the statements in the for block each time. Refer to the
-following syntax:
-
-
-```
-for i in sequence:
-    for loop body
-```
-
-Here, `i` is the variable that takes the value of the item
-inside the sequence on each iteration. This loop continues until we
-reach the last item in the sequence. This is illustrated in the
-following diagram:
-
-![](./images/9.PNG)
-
 Refer to the following example:
 
 
@@ -1352,26 +1302,6 @@ The number is 4
 
 
 ### While loop
-
-
-`while` is a looping statement that will iterate over a block of code until the entered test
-expression is `true`. We use this loop when we don\'t know how
-many times the iterations will go on. Refer to the following syntax:
-
-
-```
-while test_expression:
-    while body statements
-```
-
-In the while loop, first we will check the test expression. The
-`while` block will get executed only if the test expression is
-`true`. After one iteration, the expression will be checked
-again and this process continues until `test_expression`
-evaluates to `false`. This is illustrated in the following
-diagram: 
-
-![](./images/10.PNG)
 
 The following is an example of the `while` loop:
 
