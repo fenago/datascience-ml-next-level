@@ -120,8 +120,8 @@ The next step is to fit the model according to our training data:
 
 ```
 >>> clf.fit(iris.data, iris.target)
-SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-    degree=3, gamma=0.0, kernel='rbf', max_iter=-1,
+>>> SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+    degree=3, kernel='rbf', max_iter=-1,
     probability=True, random_state=None, shrinking=True,
     tol=0.001, verbose=False)
 ```
@@ -133,20 +133,13 @@ If given some measurement that we have never seen before, we can use the
 predict method on the model:
 
 ```
->>> unseen = [6.0, 2.0, 3.0, 2.0]
+>>> unseen = np.array([6.0, 2.0, 3.0, 2.0]).reshape(1,-1)
 >>> clf.predict(unseen)
 array([1])
 >>> iris.target_names[clf.predict(unseen)]
 array(['versicolor'],
       dtype='|S10')
 ```
-
-We see that the classifier has given the `versicolor` label to
-the measurement. If we visualize the unknown point in our plots, we see
-that this seems like a sensible prediction:
-
-
-![](../images/4689_08_03.jpg)
 
 In fact, the classifier is relatively sure about
 this label, which we can inquire into by using the
@@ -201,11 +194,10 @@ array([ 0.91190476])
 We can plot the prediction over our data as well:
 
 ```
->>> plt.plot(X, clf.predict(X), '--', color='0.10', linewidth=1)
+>>> plt.plot(X, clf.predict(X), '--', color='0.10', marker='o', linewidth=1)
 ```
 
 The output of the plot is as follows:
-
 
 ![](../images/4689_08_04.jpg)
 
@@ -254,27 +246,13 @@ simplify the prediction error calculation:
 >>> tr = {1: 0, 2: 1, 0: 2}
 >>> predicted_labels = np.array([tr[i] for i in km.labels_])
 >>> sum([p == t for (p, t) in zip(predicted_labels, iris.target)])
-134
+
 ```
 
-From 150 samples, K-Mean assigned the correct label to 134 samples,
-which is an accuracy of about 90 percent. The following plot shows the
-points of the algorithm predicted correctly in grey and the mislabeled
-points in red:
+Try the above prediction multiple times and check how many correct labels K-Mean assigned out of 150 samples.
 
 
-![](../images/4689_08_06.jpg)
-
-
-
-It is simple to run PCA with scikit-learn. We will not go into the
-implementation details, but instead try to give you an intuition of PCA
-by running it on the Iris dataset, in order to give you yet another
-angle.
-
-The process is similar to the ones we implemented
-so far. First, we instantiate our model; this time, the PCA from the
-decomposition submodule. We also import a standardization method, called
+Let's run PCA with scikit-learn. First, we instantiate our model; this time, the PCA from the decomposition submodule. We also import a standardization method, called
 `StandardScaler`, that will remove the mean from our data and
 scale to the unit variance. This step is a common requirement for many
 machine learning algorithms:
@@ -302,28 +280,17 @@ our new dataset does not consist of, for example, only petal length and
 width. Instead, the two new dimensions will represent a mixture of the
 existing features.
 
-The following scatter plot shows the transformed dataset; from a glance
-at the plot, it looks like we still kept the essence of our dataset,
-even though we halved the number of dimensions:
-
-
-![](../images/4689_08_07.jpg)
-
-
 
 Measuring prediction performance
 ---------------------------------
 
-The basic approach is to split the available data into a training and
-test set, and scikit-learn helps to create this split with the
-`train_test_split` function.
 
 We go back to the Iris dataset and perform SVC again. This time we will
 evaluate the performance of the algorithm on a training set. We set
 aside 40 percent of the data for testing:
 
 ```
->>> from sklearn.cross_validation import train_test_split
+>>> from sklearn.model_selection import train_test_split
 >>> X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.4, random_state=0)
 >>> clf = SVC()
 >>> clf.fit(X_train, y_train)
@@ -351,7 +318,7 @@ We will show a five-fold cross-validation on the Iris dataset, using SVC
 again:
 
 ```
->>> from sklearn.cross_validation import cross_val_score
+>>> from sklearn.model_selection import cross_val_score
 >>> clf = SVC()
 >>> scores = cross_val_score(clf, iris.data, iris.target, cv=5)
 >>> scores
@@ -360,12 +327,6 @@ array([ 0.96666667,  1.    ,  0.96666667,  0.96666667,  1.    ])
 0.98000000000000009
 ```
 
-There are various strategies implemented by
-different classes to split the dataset for cross-validation:
-`KFold`, `StratifiedKFold`, `LeaveOneOut`,
-`LeavePOut`, `LeaveOneLabelOut`,
-`LeavePLableOut`, `ShuffleSplit`,
-`StratifiedShuffleSplit`, and `PredefinedSplit`.
 
 
 Summary
