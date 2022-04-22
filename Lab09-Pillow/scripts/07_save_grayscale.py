@@ -24,9 +24,9 @@ image = Image.open('opera_house.jpg')
 # convert the image to grayscale
 gs_image = image.convert(mode='L')
 # save in jpeg format
-gs_image.save('/tmp/opera_house_grayscale.jpg')
+gs_image.save('tmp_opera_house_grayscale.jpg')
 # load the image again and show it
-image2 = Image.open('/tmp/opera_house_grayscale.jpg')
+image2 = Image.open('tmp_opera_house_grayscale.jpg')
 # show the image
 # image2.show()
 display(image2)

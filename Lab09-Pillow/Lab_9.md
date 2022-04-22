@@ -112,9 +112,9 @@ from PIL import Image
 # load the image
 image = Image.open('opera_house.jpg')
 # save as PNG format
-image.save('/tmp/opera_house.png', format='PNG')
+image.save('tmp_opera_house.png', format='PNG')
 # load the image again and inspect the format
-image2 = Image.open('/tmp/opera_house.png')
+image2 = Image.open('tmp_opera_house.png')
 print(image2.format)
 ```
 
@@ -133,9 +133,9 @@ image = Image.open('opera_house.jpg')
 # convert the image to grayscale
 gs_image = image.convert(mode='L')
 # save in jpeg format
-gs_image.save('/tmp/opera_house_grayscale.jpg')
+gs_image.save('tmp_opera_house_grayscale.jpg')
 # load the image again and show it
-image2 = Image.open('/tmp/opera_house_grayscale.jpg')
+image2 = Image.open('tmp_opera_house_grayscale.jpg')
 # show the image
 # image2.show()
 display(image2)

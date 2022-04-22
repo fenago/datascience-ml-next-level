@@ -302,11 +302,11 @@ SciPy - Constants
 To start with, let us compare the 'pi' value by considering the following example.
 
 ```
-#Import pi constant from both the packages
-from scipy.constants import pi
+# Import pi constant from both the packages
+from scipy.constants import pi as scipy_pi
 from math import pi
 
-print("sciPy - pi = " + str(scipy.constants.pi))
+print("sciPy - pi = " + str(scipy_pi))
 print("math -  pi = " + str(pi))
 ```
 
